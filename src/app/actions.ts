@@ -4,7 +4,7 @@ import { revalidatePath } from "next/cache";
 import { redirect } from "next/navigation";
 
 import { parseCurrencyInput } from "@/lib/money";
-import { prisma } from "@/lib/prisma";
+import { db } from "@/lib/db";
 
 function getCompetenceAndRedirectPath(formData: FormData) {
   const competence = String(formData.get("competence") ?? "");
@@ -36,19 +36,17 @@ export async function createClient(formData: FormData) {
     throw new Error("Informe o nome do cliente.");
   }
 
-  const lastClient = await prisma.client.findFirst({
+  const lastClient = await db.client.findFirst({
     orderBy: { sortOrder: "desc" },
     select: { sortOrder: true },
   });
 
-  await prisma.client.create({
-    data: {
-      name,
-      contact: contact || null,
-      monthlyFee,
-      dueDay,
-      sortOrder: (lastClient?.sortOrder ?? -1) + 1,
-    },
+  await db.client.create({
+    name,
+    contact: contact || null,
+    monthlyFee,
+    dueDay,
+    sortOrder: (lastClient?.sortOrder ?? -1) + 1,
   });
 
   revalidatePath("/");
@@ -64,19 +62,17 @@ export async function createExpense(formData: FormData) {
     throw new Error("Informe a descricao da conta.");
   }
 
-  const lastExpense = await prisma.expense.findFirst({
+  const lastExpense = await db.expense.findFirst({
     orderBy: { sortOrder: "desc" },
     select: { sortOrder: true },
   });
 
-  await prisma.expense.create({
-    data: {
-      name,
-      category: category || null,
-      amount,
-      dueDay,
-      sortOrder: (lastExpense?.sortOrder ?? -1) + 1,
-    },
+  await db.expense.create({
+    name,
+    category: category || null,
+    amount,
+    dueDay,
+    sortOrder: (lastExpense?.sortOrder ?? -1) + 1,
   });
 
   revalidatePath("/");
@@ -86,7 +82,7 @@ export async function toggleClientPayment(formData: FormData) {
   const clientId = Number(formData.get("clientId"));
   const { competence, redirectPath } = getCompetenceAndRedirectPath(formData);
 
-  const existing = await prisma.clientPayment.findUnique({
+  const existing = await db.clientPayment.findUnique({
     where: {
       clientId_competence: {
         clientId,
@@ -96,20 +92,18 @@ export async function toggleClientPayment(formData: FormData) {
   });
 
   if (existing) {
-    await prisma.clientPayment.delete({
+    await db.clientPayment.delete({
       where: { id: existing.id },
     });
   } else {
-    const client = await prisma.client.findUniqueOrThrow({
+    const client = await db.client.findUniqueOrThrow({
       where: { id: clientId },
     });
 
-    await prisma.clientPayment.create({
-      data: {
-        clientId,
-        competence,
-        amount: client.monthlyFee,
-      },
+    await db.clientPayment.create({
+      clientId,
+      competence,
+      amount: client.monthlyFee,
     });
   }
 
@@ -121,7 +115,7 @@ export async function toggleExpenseSettlement(formData: FormData) {
   const expenseId = Number(formData.get("expenseId"));
   const { competence, redirectPath } = getCompetenceAndRedirectPath(formData);
 
-  const existing = await prisma.expenseSettlement.findUnique({
+  const existing = await db.expenseSettlement.findUnique({
     where: {
       expenseId_competence: {
         expenseId,
@@ -131,15 +125,13 @@ export async function toggleExpenseSettlement(formData: FormData) {
   });
 
   if (existing) {
-    await prisma.expenseSettlement.delete({
+    await db.expenseSettlement.delete({
       where: { id: existing.id },
     });
   } else {
-    await prisma.expenseSettlement.create({
-      data: {
-        expenseId,
-        competence,
-      },
+    await db.expenseSettlement.create({
+      expenseId,
+      competence,
     });
   }
 
@@ -150,11 +142,11 @@ export async function toggleExpenseSettlement(formData: FormData) {
 export async function toggleClientActive(formData: FormData) {
   const clientId = Number(formData.get("clientId"));
 
-  const client = await prisma.client.findUniqueOrThrow({
+  const client = await db.client.findUniqueOrThrow({
     where: { id: clientId },
   });
 
-  await prisma.client.update({
+  await db.client.update({
     where: { id: clientId },
     data: { active: !client.active },
   });
@@ -165,11 +157,11 @@ export async function toggleClientActive(formData: FormData) {
 export async function toggleExpenseActive(formData: FormData) {
   const expenseId = Number(formData.get("expenseId"));
 
-  const expense = await prisma.expense.findUniqueOrThrow({
+  const expense = await db.expense.findUniqueOrThrow({
     where: { id: expenseId },
   });
 
-  await prisma.expense.update({
+  await db.expense.update({
     where: { id: expenseId },
     data: { active: !expense.active },
   });
@@ -181,7 +173,7 @@ export async function deleteClient(formData: FormData) {
   const clientId = Number(formData.get("clientId"));
   const competence = String(formData.get("competence") ?? "");
 
-  await prisma.client.update({
+  await db.client.update({
     where: { id: clientId },
     data: {
       archivedFromCompetence: competence,
@@ -196,7 +188,7 @@ export async function deleteExpense(formData: FormData) {
   const expenseId = Number(formData.get("expenseId"));
   const competence = String(formData.get("competence") ?? "");
 
-  await prisma.expense.update({
+  await db.expense.update({
     where: { id: expenseId },
     data: {
       archivedFromCompetence: competence,

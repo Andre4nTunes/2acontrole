@@ -1,4 +1,4 @@
-import { prisma } from "@/lib/prisma";
+import { db } from "@/lib/db";
 
 type ClientRecord = {
   id: number;
@@ -66,7 +66,7 @@ export type DashboardData = {
 
 export async function getDashboardData(competence: string): Promise<DashboardData> {
   const [clients, expenses, clientPayments, expenseSettlements] = (await Promise.all([
-    prisma.client.findMany({
+    db.client.findMany({
       where: {
         OR: [
           { archivedFromCompetence: null },
@@ -75,7 +75,7 @@ export async function getDashboardData(competence: string): Promise<DashboardDat
       },
       orderBy: [{ sortOrder: "asc" }, { name: "asc" }],
     }),
-    prisma.expense.findMany({
+    db.expense.findMany({
       where: {
         OR: [
           { archivedFromCompetence: null },
@@ -84,10 +84,10 @@ export async function getDashboardData(competence: string): Promise<DashboardDat
       },
       orderBy: [{ sortOrder: "asc" }, { name: "asc" }],
     }),
-    prisma.clientPayment.findMany({
+    db.clientPayment.findMany({
       where: { competence },
     }),
-    prisma.expenseSettlement.findMany({
+    db.expenseSettlement.findMany({
       where: { competence },
     }),
   ])) as [

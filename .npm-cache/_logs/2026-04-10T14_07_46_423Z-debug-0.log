@@ -1,0 +1,941 @@
+0 verbose cli C:\Program Files\nodejs\node.exe C:\Program Files\nodejs\node_modules\npm\bin\npm-cli.js
+1 info using npm@11.11.0
+2 info using node@v24.14.1
+3 silly config load:file:C:\Program Files\nodejs\node_modules\npm\npmrc
+4 silly config load:file:D:\SITES\CONTROLE\.npmrc
+5 silly config load:file:C:\Users\andre\.npmrc
+6 silly config load:file:C:\Users\andre\AppData\Roaming\npm\etc\npmrc
+7 verbose title npm install @prisma/adapter-better-sqlite3 better-sqlite3
+8 verbose argv "install" "@prisma/adapter-better-sqlite3" "better-sqlite3"
+9 verbose logfile logs-max:10 dir:D:\SITES\CONTROLE\.npm-cache\_logs\2026-04-10T14_07_46_423Z-
+10 verbose logfile D:\SITES\CONTROLE\.npm-cache\_logs\2026-04-10T14_07_46_423Z-debug-0.log
+11 silly logfile done cleaning log files
+12 silly packumentCache heap:2348810240 maxSize:587202560 maxEntrySize:293601280
+13 verbose shrinkwrap failed to load node_modules/.package-lock.json out of date, updated: node_modules
+14 silly idealTree buildDeps
+15 silly fetch manifest @prisma/adapter-better-sqlite3@*
+16 silly packumentCache full:https://registry.npmjs.org/@prisma%2fadapter-better-sqlite3 cache-miss
+17 http fetch GET 200 https://registry.npmjs.org/@prisma%2fadapter-better-sqlite3 4827ms (cache miss)
+18 silly packumentCache full:https://registry.npmjs.org/@prisma%2fadapter-better-sqlite3 set size:undefined disposed:false
+19 silly fetch manifest better-sqlite3@*
+20 silly packumentCache full:https://registry.npmjs.org/better-sqlite3 cache-miss
+21 http fetch GET 200 https://registry.npmjs.org/better-sqlite3 154ms (cache revalidated)
+22 silly packumentCache full:https://registry.npmjs.org/better-sqlite3 set size:372287 disposed:false
+23 silly placeDep ROOT @prisma/adapter-better-sqlite3@7.7.0 OK for: controle-app@0.1.0 want: *
+24 silly placeDep ROOT better-sqlite3@12.8.0 OK for: controle-app@0.1.0 want: *
+25 silly fetch manifest better-sqlite3@^12.6.0
+26 silly packumentCache full:https://registry.npmjs.org/better-sqlite3 cache-hit
+27 silly fetch manifest @prisma/driver-adapter-utils@7.7.0
+28 silly packumentCache full:https://registry.npmjs.org/@prisma%2fdriver-adapter-utils cache-miss
+29 silly fetch manifest bindings@^1.5.0
+30 silly packumentCache full:https://registry.npmjs.org/bindings cache-miss
+31 silly fetch manifest prebuild-install@^7.1.1
+32 silly packumentCache full:https://registry.npmjs.org/prebuild-install cache-miss
+33 http fetch GET 200 https://registry.npmjs.org/prebuild-install 131ms (cache miss)
+34 silly packumentCache full:https://registry.npmjs.org/prebuild-install set size:undefined disposed:false
+35 http fetch GET 200 https://registry.npmjs.org/bindings 134ms (cache miss)
+36 silly packumentCache full:https://registry.npmjs.org/bindings set size:undefined disposed:false
+37 http fetch GET 200 https://registry.npmjs.org/@prisma%2fdriver-adapter-utils 593ms (cache miss)
+38 silly packumentCache full:https://registry.npmjs.org/@prisma%2fdriver-adapter-utils set size:undefined disposed:false
+39 silly placeDep ROOT @prisma/driver-adapter-utils@7.7.0 OK for: @prisma/adapter-better-sqlite3@7.7.0 want: 7.7.0
+40 silly placeDep ROOT bindings@1.5.0 OK for: better-sqlite3@12.8.0 want: ^1.5.0
+41 silly placeDep ROOT prebuild-install@7.1.3 OK for: better-sqlite3@12.8.0 want: ^7.1.1
+42 silly fetch manifest file-uri-to-path@1.0.0
+43 silly packumentCache full:https://registry.npmjs.org/file-uri-to-path cache-miss
+44 silly fetch manifest rc@^1.2.7
+45 silly packumentCache full:https://registry.npmjs.org/rc cache-miss
+46 silly fetch manifest pump@^3.0.0
+47 silly packumentCache full:https://registry.npmjs.org/pump cache-miss
+48 silly fetch manifest tar-fs@^2.0.0
+49 silly packumentCache full:https://registry.npmjs.org/tar-fs cache-miss
+50 silly fetch manifest node-abi@^3.3.0
+51 silly packumentCache full:https://registry.npmjs.org/node-abi cache-miss
+52 silly fetch manifest simple-get@^4.0.0
+53 silly packumentCache full:https://registry.npmjs.org/simple-get cache-miss
+54 silly fetch manifest tunnel-agent@^0.6.0
+55 silly packumentCache full:https://registry.npmjs.org/tunnel-agent cache-miss
+56 http fetch GET 200 https://registry.npmjs.org/file-uri-to-path 55ms (cache miss)
+57 silly packumentCache full:https://registry.npmjs.org/file-uri-to-path set size:undefined disposed:false
+58 silly fetch manifest mkdirp-classic@^0.5.3
+59 silly packumentCache full:https://registry.npmjs.org/mkdirp-classic cache-miss
+60 http fetch GET 200 https://registry.npmjs.org/rc 66ms (cache miss)
+61 silly packumentCache full:https://registry.npmjs.org/rc set size:undefined disposed:false
+62 silly fetch manifest expand-template@^2.0.3
+63 silly packumentCache full:https://registry.npmjs.org/expand-template cache-miss
+64 http fetch GET 200 https://registry.npmjs.org/pump 78ms (cache miss)
+65 silly packumentCache full:https://registry.npmjs.org/pump set size:undefined disposed:false
+66 silly fetch manifest napi-build-utils@^2.0.0
+67 silly packumentCache full:https://registry.npmjs.org/napi-build-utils cache-miss
+68 http fetch GET 200 https://registry.npmjs.org/mkdirp-classic 47ms (cache miss)
+69 silly packumentCache full:https://registry.npmjs.org/mkdirp-classic set size:undefined disposed:false
+70 silly fetch manifest github-from-package@0.0.0
+71 silly packumentCache full:https://registry.npmjs.org/github-from-package cache-miss
+72 http fetch GET 200 https://registry.npmjs.org/napi-build-utils 70ms (cache miss)
+73 silly packumentCache full:https://registry.npmjs.org/napi-build-utils set size:undefined disposed:false
+74 http fetch GET 200 https://registry.npmjs.org/tunnel-agent 149ms (cache miss)
+75 silly packumentCache full:https://registry.npmjs.org/tunnel-agent set size:undefined disposed:false
+76 http fetch GET 200 https://registry.npmjs.org/expand-template 84ms (cache miss)
+77 silly packumentCache full:https://registry.npmjs.org/expand-template set size:undefined disposed:false
+78 http fetch GET 200 https://registry.npmjs.org/simple-get 155ms (cache miss)
+79 silly packumentCache full:https://registry.npmjs.org/simple-get set size:undefined disposed:false
+80 http fetch GET 200 https://registry.npmjs.org/github-from-package 51ms (cache miss)
+81 silly packumentCache full:https://registry.npmjs.org/github-from-package set size:undefined disposed:false
+82 http fetch GET 200 https://registry.npmjs.org/tar-fs 159ms (cache miss)
+83 silly packumentCache full:https://registry.npmjs.org/tar-fs set size:undefined disposed:false
+84 http fetch GET 200 https://registry.npmjs.org/node-abi 165ms (cache miss)
+85 silly packumentCache full:https://registry.npmjs.org/node-abi set size:undefined disposed:false
+86 silly placeDep ROOT file-uri-to-path@1.0.0 OK for: bindings@1.5.0 want: 1.0.0
+87 silly placeDep ROOT expand-template@2.0.3 OK for: prebuild-install@7.1.3 want: ^2.0.3
+88 silly placeDep ROOT github-from-package@0.0.0 OK for: prebuild-install@7.1.3 want: 0.0.0
+89 silly placeDep ROOT mkdirp-classic@0.5.3 OK for: prebuild-install@7.1.3 want: ^0.5.3
+90 silly placeDep ROOT napi-build-utils@2.0.0 OK for: prebuild-install@7.1.3 want: ^2.0.0
+91 silly placeDep ROOT node-abi@3.89.0 OK for: prebuild-install@7.1.3 want: ^3.3.0
+92 silly placeDep ROOT pump@3.0.4 OK for: prebuild-install@7.1.3 want: ^3.0.0
+93 silly placeDep ROOT rc@1.2.8 OK for: prebuild-install@7.1.3 want: ^1.2.7
+94 silly placeDep ROOT simple-get@4.0.1 OK for: prebuild-install@7.1.3 want: ^4.0.0
+95 silly placeDep ROOT tar-fs@2.1.4 OK for: prebuild-install@7.1.3 want: ^2.0.0
+96 silly placeDep ROOT tunnel-agent@0.6.0 OK for: prebuild-install@7.1.3 want: ^0.6.0
+97 silly fetch manifest semver@^7.3.5
+98 silly packumentCache full:https://registry.npmjs.org/semver cache-miss
+99 silly fetch manifest end-of-stream@^1.1.0
+100 silly packumentCache full:https://registry.npmjs.org/end-of-stream cache-miss
+101 silly fetch manifest once@^1.3.1
+102 silly packumentCache full:https://registry.npmjs.org/once cache-miss
+103 silly fetch manifest ini@~1.3.0
+104 silly packumentCache full:https://registry.npmjs.org/ini cache-miss
+105 silly fetch manifest deep-extend@^0.6.0
+106 silly packumentCache full:https://registry.npmjs.org/deep-extend cache-miss
+107 silly fetch manifest strip-json-comments@~2.0.1
+108 silly packumentCache full:https://registry.npmjs.org/strip-json-comments cache-miss
+109 silly fetch manifest decompress-response@^6.0.0
+110 silly packumentCache full:https://registry.npmjs.org/decompress-response cache-miss
+111 http fetch GET 200 https://registry.npmjs.org/end-of-stream 90ms (cache miss)
+112 silly packumentCache full:https://registry.npmjs.org/end-of-stream set size:undefined disposed:false
+113 silly fetch manifest once@^1.3.1
+114 silly packumentCache full:https://registry.npmjs.org/once cache-miss
+115 http fetch GET 200 https://registry.npmjs.org/deep-extend 94ms (cache miss)
+116 silly packumentCache full:https://registry.npmjs.org/deep-extend set size:undefined disposed:false
+117 silly fetch manifest simple-concat@^1.0.0
+118 silly packumentCache full:https://registry.npmjs.org/simple-concat cache-miss
+119 http fetch GET 200 https://registry.npmjs.org/once 98ms (cache miss)
+120 silly packumentCache full:https://registry.npmjs.org/once set size:undefined disposed:false
+121 silly fetch manifest chownr@^1.1.1
+122 silly packumentCache full:https://registry.npmjs.org/chownr cache-miss
+123 http fetch GET 200 https://registry.npmjs.org/decompress-response 99ms (cache miss)
+124 silly packumentCache full:https://registry.npmjs.org/decompress-response set size:undefined disposed:false
+125 silly fetch manifest tar-stream@^2.1.4
+126 silly packumentCache full:https://registry.npmjs.org/tar-stream cache-miss
+127 http fetch GET 200 https://registry.npmjs.org/ini 101ms (cache miss)
+128 silly packumentCache full:https://registry.npmjs.org/ini set size:undefined disposed:false
+129 silly fetch manifest safe-buffer@^5.0.1
+130 silly packumentCache full:https://registry.npmjs.org/safe-buffer cache-miss
+131 http cache https://registry.npmjs.org/once 18ms (cache hit)
+132 silly packumentCache full:https://registry.npmjs.org/once set size:11752 disposed:false
+133 http fetch GET 200 https://registry.npmjs.org/semver 141ms (cache revalidated)
+134 silly packumentCache full:https://registry.npmjs.org/semver set size:229620 disposed:false
+135 http fetch GET 200 https://registry.npmjs.org/strip-json-comments 148ms (cache revalidated)
+136 silly packumentCache full:https://registry.npmjs.org/strip-json-comments set size:43569 disposed:false
+137 http fetch GET 200 https://registry.npmjs.org/chownr 70ms (cache miss)
+138 silly packumentCache full:https://registry.npmjs.org/chownr set size:undefined disposed:false
+139 http fetch GET 200 https://registry.npmjs.org/simple-concat 73ms (cache miss)
+140 silly packumentCache full:https://registry.npmjs.org/simple-concat set size:undefined disposed:false
+141 http fetch GET 200 https://registry.npmjs.org/safe-buffer 69ms (cache miss)
+142 silly packumentCache full:https://registry.npmjs.org/safe-buffer set size:undefined disposed:false
+143 http fetch GET 200 https://registry.npmjs.org/tar-stream 75ms (cache miss)
+144 silly packumentCache full:https://registry.npmjs.org/tar-stream set size:undefined disposed:false
+145 silly placeDep node_modules/node-abi semver@7.7.4 OK for: node-abi@3.89.0 want: ^7.3.5
+146 silly placeDep ROOT end-of-stream@1.4.5 OK for: pump@3.0.4 want: ^1.1.0
+147 silly placeDep ROOT once@1.4.0 OK for: pump@3.0.4 want: ^1.3.1
+148 silly fetch manifest once@^1.4.0
+149 silly packumentCache full:https://registry.npmjs.org/once cache-hit
+150 silly fetch manifest wrappy@1
+151 silly packumentCache full:https://registry.npmjs.org/wrappy cache-miss
+152 http fetch GET 200 https://registry.npmjs.org/wrappy 63ms (cache miss)
+153 silly packumentCache full:https://registry.npmjs.org/wrappy set size:undefined disposed:false
+154 silly placeDep ROOT wrappy@1.0.2 OK for: once@1.4.0 want: 1
+155 silly placeDep ROOT deep-extend@0.6.0 OK for: rc@1.2.8 want: ^0.6.0
+156 silly placeDep ROOT ini@1.3.8 OK for: rc@1.2.8 want: ~1.3.0
+157 silly placeDep node_modules/rc strip-json-comments@2.0.1 OK for: rc@1.2.8 want: ~2.0.1
+158 silly placeDep ROOT decompress-response@6.0.0 OK for: simple-get@4.0.1 want: ^6.0.0
+159 silly placeDep ROOT simple-concat@1.0.1 OK for: simple-get@4.0.1 want: ^1.0.0
+160 silly fetch manifest mimic-response@^3.1.0
+161 silly packumentCache full:https://registry.npmjs.org/mimic-response cache-miss
+162 http fetch GET 200 https://registry.npmjs.org/mimic-response 44ms (cache miss)
+163 silly packumentCache full:https://registry.npmjs.org/mimic-response set size:undefined disposed:false
+164 silly placeDep ROOT mimic-response@3.1.0 OK for: decompress-response@6.0.0 want: ^3.1.0
+165 silly placeDep ROOT chownr@1.1.4 OK for: tar-fs@2.1.4 want: ^1.1.1
+166 silly placeDep ROOT tar-stream@2.2.0 OK for: tar-fs@2.1.4 want: ^2.1.4
+167 silly fetch manifest bl@^4.0.3
+168 silly packumentCache full:https://registry.npmjs.org/bl cache-miss
+169 silly fetch manifest inherits@^2.0.3
+170 silly packumentCache full:https://registry.npmjs.org/inherits cache-miss
+171 silly fetch manifest fs-constants@^1.0.0
+172 silly packumentCache full:https://registry.npmjs.org/fs-constants cache-miss
+173 silly fetch manifest readable-stream@^3.1.1
+174 silly packumentCache full:https://registry.npmjs.org/readable-stream cache-miss
+175 http fetch GET 200 https://registry.npmjs.org/fs-constants 51ms (cache miss)
+176 silly packumentCache full:https://registry.npmjs.org/fs-constants set size:undefined disposed:false
+177 http fetch GET 200 https://registry.npmjs.org/inherits 53ms (cache miss)
+178 silly packumentCache full:https://registry.npmjs.org/inherits set size:undefined disposed:false
+179 http fetch GET 200 https://registry.npmjs.org/bl 60ms (cache miss)
+180 silly packumentCache full:https://registry.npmjs.org/bl set size:undefined disposed:false
+181 http fetch GET 200 https://registry.npmjs.org/readable-stream 62ms (cache miss)
+182 silly packumentCache full:https://registry.npmjs.org/readable-stream set size:undefined disposed:false
+183 silly placeDep ROOT bl@4.1.0 OK for: tar-stream@2.2.0 want: ^4.0.3
+184 silly placeDep ROOT fs-constants@1.0.0 OK for: tar-stream@2.2.0 want: ^1.0.0
+185 silly placeDep ROOT inherits@2.0.4 OK for: tar-stream@2.2.0 want: ^2.0.3
+186 silly placeDep ROOT readable-stream@3.6.2 OK for: tar-stream@2.2.0 want: ^3.1.1
+187 silly fetch manifest buffer@^5.5.0
+188 silly packumentCache full:https://registry.npmjs.org/buffer cache-miss
+189 silly fetch manifest inherits@^2.0.4
+190 silly packumentCache full:https://registry.npmjs.org/inherits cache-miss
+191 silly fetch manifest readable-stream@^3.4.0
+192 silly packumentCache full:https://registry.npmjs.org/readable-stream cache-miss
+193 silly fetch manifest string_decoder@^1.1.1
+194 silly packumentCache full:https://registry.npmjs.org/string_decoder cache-miss
+195 silly fetch manifest util-deprecate@^1.0.1
+196 silly packumentCache full:https://registry.npmjs.org/util-deprecate cache-miss
+197 http cache https://registry.npmjs.org/inherits 11ms (cache hit)
+198 silly packumentCache full:https://registry.npmjs.org/inherits set size:12925 disposed:false
+199 http cache https://registry.npmjs.org/readable-stream 12ms (cache hit)
+200 silly packumentCache full:https://registry.npmjs.org/readable-stream set size:261096 disposed:false
+201 http fetch GET 200 https://registry.npmjs.org/util-deprecate 87ms (cache miss)
+202 silly packumentCache full:https://registry.npmjs.org/util-deprecate set size:undefined disposed:false
+203 http fetch GET 200 https://registry.npmjs.org/string_decoder 90ms (cache miss)
+204 silly packumentCache full:https://registry.npmjs.org/string_decoder set size:undefined disposed:false
+205 http fetch GET 200 https://registry.npmjs.org/buffer 92ms (cache miss)
+206 silly packumentCache full:https://registry.npmjs.org/buffer set size:undefined disposed:false
+207 silly placeDep ROOT buffer@5.7.1 OK for: bl@4.1.0 want: ^5.5.0
+208 silly fetch manifest base64-js@^1.3.1
+209 silly packumentCache full:https://registry.npmjs.org/base64-js cache-miss
+210 silly fetch manifest ieee754@^1.1.13
+211 silly packumentCache full:https://registry.npmjs.org/ieee754 cache-miss
+212 http fetch GET 200 https://registry.npmjs.org/ieee754 56ms (cache miss)
+213 silly packumentCache full:https://registry.npmjs.org/ieee754 set size:undefined disposed:false
+214 http fetch GET 200 https://registry.npmjs.org/base64-js 58ms (cache miss)
+215 silly packumentCache full:https://registry.npmjs.org/base64-js set size:undefined disposed:false
+216 silly placeDep ROOT base64-js@1.5.1 OK for: buffer@5.7.1 want: ^1.3.1
+217 silly placeDep ROOT ieee754@1.2.1 OK for: buffer@5.7.1 want: ^1.1.13
+218 silly placeDep ROOT string_decoder@1.3.0 OK for: readable-stream@3.6.2 want: ^1.1.1
+219 silly placeDep ROOT util-deprecate@1.0.2 OK for: readable-stream@3.6.2 want: ^1.0.1
+220 silly fetch manifest safe-buffer@~5.2.0
+221 silly packumentCache full:https://registry.npmjs.org/safe-buffer cache-miss
+222 http cache https://registry.npmjs.org/safe-buffer 78ms (cache hit)
+223 silly packumentCache full:https://registry.npmjs.org/safe-buffer set size:41183 disposed:false
+224 silly placeDep ROOT safe-buffer@5.2.1 OK for: string_decoder@1.3.0 want: ~5.2.0
+225 silly reify moves {}
+226 silly audit bulk request {
+226 silly audit   '@alloc/quick-lru': [ '5.2.0' ],
+226 silly audit   '@babel/code-frame': [ '7.29.0' ],
+226 silly audit   '@babel/compat-data': [ '7.29.0' ],
+226 silly audit   '@babel/core': [ '7.29.0' ],
+226 silly audit   '@babel/generator': [ '7.29.1' ],
+226 silly audit   '@babel/helper-compilation-targets': [ '7.28.6' ],
+226 silly audit   '@babel/helper-globals': [ '7.28.0' ],
+226 silly audit   '@babel/helper-module-imports': [ '7.28.6' ],
+226 silly audit   '@babel/helper-module-transforms': [ '7.28.6' ],
+226 silly audit   '@babel/helper-string-parser': [ '7.27.1' ],
+226 silly audit   '@babel/helper-validator-identifier': [ '7.28.5' ],
+226 silly audit   '@babel/helper-validator-option': [ '7.27.1' ],
+226 silly audit   '@babel/helpers': [ '7.29.2' ],
+226 silly audit   '@babel/parser': [ '7.29.2' ],
+226 silly audit   '@babel/template': [ '7.28.6' ],
+226 silly audit   '@babel/traverse': [ '7.29.0' ],
+226 silly audit   '@babel/types': [ '7.29.0' ],
+226 silly audit   '@electric-sql/pglite': [ '0.4.1' ],
+226 silly audit   '@electric-sql/pglite-socket': [ '0.1.1' ],
+226 silly audit   '@electric-sql/pglite-tools': [ '0.3.1' ],
+226 silly audit   '@emnapi/core': [ '1.9.2' ],
+226 silly audit   '@emnapi/runtime': [ '1.9.2' ],
+226 silly audit   '@emnapi/wasi-threads': [ '1.2.1' ],
+226 silly audit   '@eslint-community/eslint-utils': [ '4.9.1' ],
+226 silly audit   'eslint-visitor-keys': [ '3.4.3', '5.0.1', '4.2.1' ],
+226 silly audit   '@eslint-community/regexpp': [ '4.12.2' ],
+226 silly audit   '@eslint/config-array': [ '0.21.2' ],
+226 silly audit   '@eslint/config-helpers': [ '0.4.2' ],
+226 silly audit   '@eslint/core': [ '0.17.0' ],
+226 silly audit   '@eslint/eslintrc': [ '3.3.5' ],
+226 silly audit   '@eslint/js': [ '9.39.4' ],
+226 silly audit   '@eslint/object-schema': [ '2.1.7' ],
+226 silly audit   '@eslint/plugin-kit': [ '0.4.1' ],
+226 silly audit   '@hono/node-server': [ '1.19.11' ],
+226 silly audit   '@humanfs/core': [ '0.19.1' ],
+226 silly audit   '@humanfs/node': [ '0.16.7' ],
+226 silly audit   '@humanwhocodes/module-importer': [ '1.0.1' ],
+226 silly audit   '@humanwhocodes/retry': [ '0.4.3' ],
+226 silly audit   '@img/colour': [ '1.1.0' ],
+226 silly audit   '@img/sharp-darwin-arm64': [ '0.34.5' ],
+226 silly audit   '@img/sharp-darwin-x64': [ '0.34.5' ],
+226 silly audit   '@img/sharp-libvips-darwin-arm64': [ '1.2.4' ],
+226 silly audit   '@img/sharp-libvips-darwin-x64': [ '1.2.4' ],
+226 silly audit   '@img/sharp-libvips-linux-arm': [ '1.2.4' ],
+226 silly audit   '@img/sharp-libvips-linux-arm64': [ '1.2.4' ],
+226 silly audit   '@img/sharp-libvips-linux-ppc64': [ '1.2.4' ],
+226 silly audit   '@img/sharp-libvips-linux-riscv64': [ '1.2.4' ],
+226 silly audit   '@img/sharp-libvips-linux-s390x': [ '1.2.4' ],
+226 silly audit   '@img/sharp-libvips-linux-x64': [ '1.2.4' ],
+226 silly audit   '@img/sharp-libvips-linuxmusl-arm64': [ '1.2.4' ],
+226 silly audit   '@img/sharp-libvips-linuxmusl-x64': [ '1.2.4' ],
+226 silly audit   '@img/sharp-linux-arm': [ '0.34.5' ],
+226 silly audit   '@img/sharp-linux-arm64': [ '0.34.5' ],
+226 silly audit   '@img/sharp-linux-ppc64': [ '0.34.5' ],
+226 silly audit   '@img/sharp-linux-riscv64': [ '0.34.5' ],
+226 silly audit   '@img/sharp-linux-s390x': [ '0.34.5' ],
+226 silly audit   '@img/sharp-linux-x64': [ '0.34.5' ],
+226 silly audit   '@img/sharp-linuxmusl-arm64': [ '0.34.5' ],
+226 silly audit   '@img/sharp-linuxmusl-x64': [ '0.34.5' ],
+226 silly audit   '@img/sharp-wasm32': [ '0.34.5' ],
+226 silly audit   '@img/sharp-win32-arm64': [ '0.34.5' ],
+226 silly audit   '@img/sharp-win32-ia32': [ '0.34.5' ],
+226 silly audit   '@img/sharp-win32-x64': [ '0.34.5' ],
+226 silly audit   '@jridgewell/gen-mapping': [ '0.3.13' ],
+226 silly audit   '@jridgewell/remapping': [ '2.3.5' ],
+226 silly audit   '@jridgewell/resolve-uri': [ '3.1.2' ],
+226 silly audit   '@jridgewell/sourcemap-codec': [ '1.5.5' ],
+226 silly audit   '@jridgewell/trace-mapping': [ '0.3.31' ],
+226 silly audit   '@kurkle/color': [ '0.3.4' ],
+226 silly audit   '@napi-rs/wasm-runtime': [ '0.2.12' ],
+226 silly audit   '@next/env': [ '16.2.3' ],
+226 silly audit   '@next/eslint-plugin-next': [ '16.2.3' ],
+226 silly audit   '@next/swc-darwin-arm64': [ '16.2.3' ],
+226 silly audit   '@next/swc-darwin-x64': [ '16.2.3' ],
+226 silly audit   '@next/swc-linux-arm64-gnu': [ '16.2.3' ],
+226 silly audit   '@next/swc-linux-arm64-musl': [ '16.2.3' ],
+226 silly audit   '@next/swc-linux-x64-gnu': [ '16.2.3' ],
+226 silly audit   '@next/swc-linux-x64-musl': [ '16.2.3' ],
+226 silly audit   '@next/swc-win32-arm64-msvc': [ '16.2.3' ],
+226 silly audit   '@next/swc-win32-x64-msvc': [ '16.2.3' ],
+226 silly audit   '@nodelib/fs.scandir': [ '2.1.5' ],
+226 silly audit   '@nodelib/fs.stat': [ '2.0.5' ],
+226 silly audit   '@nodelib/fs.walk': [ '1.2.8' ],
+226 silly audit   '@nolyfill/is-core-module': [ '1.0.39' ],
+226 silly audit   '@prisma/client': [ '7.7.0' ],
+226 silly audit   '@prisma/client-runtime-utils': [ '7.7.0' ],
+226 silly audit   '@prisma/config': [ '7.7.0' ],
+226 silly audit   '@prisma/debug': [ '7.7.0', '7.2.0' ],
+226 silly audit   '@prisma/dev': [ '0.24.3' ],
+226 silly audit   '@prisma/engines': [ '7.7.0' ],
+226 silly audit   '@prisma/engines-version': [ '7.6.0-1.75cbdc1eb7150937890ad5465d861175c6624711' ],
+226 silly audit   '@prisma/get-platform': [ '7.7.0', '7.2.0' ],
+226 silly audit   '@prisma/fetch-engine': [ '7.7.0' ],
+226 silly audit   '@prisma/query-plan-executor': [ '7.2.0' ],
+226 silly audit   '@prisma/streams-local': [ '0.1.2' ],
+226 silly audit   ajv: [ '8.18.0', '6.14.0' ],
+226 silly audit   'json-schema-traverse': [ '1.0.0', '0.4.1' ],
+226 silly audit   '@prisma/studio-core': [ '0.27.3' ],
+226 silly audit   '@radix-ui/primitive': [ '1.1.3' ],
+226 silly audit   '@radix-ui/react-compose-refs': [ '1.1.2' ],
+226 silly audit   '@radix-ui/react-primitive': [ '2.1.3' ],
+226 silly audit   '@radix-ui/react-slot': [ '1.2.3' ],
+226 silly audit   '@radix-ui/react-toggle': [ '1.1.10' ],
+226 silly audit   '@radix-ui/react-use-controllable-state': [ '1.2.2' ],
+226 silly audit   '@radix-ui/react-use-effect-event': [ '0.0.2' ],
+226 silly audit   '@radix-ui/react-use-layout-effect': [ '1.1.1' ],
+226 silly audit   '@rtsao/scc': [ '1.1.0' ],
+226 silly audit   '@standard-schema/spec': [ '1.1.0' ],
+226 silly audit   '@swc/helpers': [ '0.5.15' ],
+226 silly audit   '@tailwindcss/node': [ '4.2.2' ],
+226 silly audit   '@tailwindcss/oxide': [ '4.2.2' ],
+226 silly audit   '@tailwindcss/oxide-android-arm64': [ '4.2.2' ],
+226 silly audit   '@tailwindcss/oxide-darwin-arm64': [ '4.2.2' ],
+226 silly audit   '@tailwindcss/oxide-darwin-x64': [ '4.2.2' ],
+226 silly audit   '@tailwindcss/oxide-freebsd-x64': [ '4.2.2' ],
+226 silly audit   '@tailwindcss/oxide-linux-arm-gnueabihf': [ '4.2.2' ],
+226 silly audit   '@tailwindcss/oxide-linux-arm64-gnu': [ '4.2.2' ],
+226 silly audit   '@tailwindcss/oxide-linux-arm64-musl': [ '4.2.2' ],
+226 silly audit   '@tailwindcss/oxide-linux-x64-gnu': [ '4.2.2' ],
+226 silly audit   '@tailwindcss/oxide-linux-x64-musl': [ '4.2.2' ],
+226 silly audit   '@tailwindcss/oxide-wasm32-wasi': [ '4.2.2' ],
+226 silly audit   '@tailwindcss/oxide-win32-arm64-msvc': [ '4.2.2' ],
+226 silly audit   '@tailwindcss/oxide-win32-x64-msvc': [ '4.2.2' ],
+226 silly audit   '@tailwindcss/postcss': [ '4.2.2' ],
+226 silly audit   '@tybys/wasm-util': [ '0.10.1' ],
+226 silly audit   '@types/estree': [ '1.0.8' ],
+226 silly audit   '@types/json-schema': [ '7.0.15' ],
+226 silly audit   '@types/json5': [ '0.0.29' ],
+226 silly audit   '@types/node': [ '20.19.39' ],
+226 silly audit   '@types/react': [ '19.2.14' ],
+226 silly audit   '@types/react-dom': [ '19.2.3' ],
+226 silly audit   '@typescript-eslint/eslint-plugin': [ '8.58.1' ],
+226 silly audit   ignore: [ '7.0.5', '5.3.2' ],
+226 silly audit   '@typescript-eslint/parser': [ '8.58.1' ],
+226 silly audit   '@typescript-eslint/project-service': [ '8.58.1' ],
+226 silly audit   '@typescript-eslint/scope-manager': [ '8.58.1' ],
+226 silly audit   '@typescript-eslint/tsconfig-utils': [ '8.58.1' ],
+226 silly audit   '@typescript-eslint/type-utils': [ '8.58.1' ],
+226 silly audit   '@typescript-eslint/types': [ '8.58.1' ],
+226 silly audit   '@typescript-eslint/typescript-estree': [ '8.58.1' ],
+226 silly audit   'balanced-match': [ '4.0.4', '1.0.2' ],
+226 silly audit   'brace-expansion': [ '5.0.5', '1.1.13' ],
+226 silly audit   minimatch: [ '10.2.5', '3.1.5' ],
+226 silly audit   semver: [ '7.7.4', '6.3.1' ],
+226 silly audit   '@typescript-eslint/utils': [ '8.58.1' ],
+226 silly audit   '@typescript-eslint/visitor-keys': [ '8.58.1' ],
+226 silly audit   '@unrs/resolver-binding-android-arm-eabi': [ '1.11.1' ],
+226 silly audit   '@unrs/resolver-binding-android-arm64': [ '1.11.1' ],
+226 silly audit   '@unrs/resolver-binding-darwin-arm64': [ '1.11.1' ],
+226 silly audit   '@unrs/resolver-binding-darwin-x64': [ '1.11.1' ],
+226 silly audit   '@unrs/resolver-binding-freebsd-x64': [ '1.11.1' ],
+226 silly audit   '@unrs/resolver-binding-linux-arm-gnueabihf': [ '1.11.1' ],
+226 silly audit   '@unrs/resolver-binding-linux-arm-musleabihf': [ '1.11.1' ],
+226 silly audit   '@unrs/resolver-binding-linux-arm64-gnu': [ '1.11.1' ],
+226 silly audit   '@unrs/resolver-binding-linux-arm64-musl': [ '1.11.1' ],
+226 silly audit   '@unrs/resolver-binding-linux-ppc64-gnu': [ '1.11.1' ],
+226 silly audit   '@unrs/resolver-binding-linux-riscv64-gnu': [ '1.11.1' ],
+226 silly audit   '@unrs/resolver-binding-linux-riscv64-musl': [ '1.11.1' ],
+226 silly audit   '@unrs/resolver-binding-linux-s390x-gnu': [ '1.11.1' ],
+226 silly audit   '@unrs/resolver-binding-linux-x64-gnu': [ '1.11.1' ],
+226 silly audit   '@unrs/resolver-binding-linux-x64-musl': [ '1.11.1' ],
+226 silly audit   '@unrs/resolver-binding-wasm32-wasi': [ '1.11.1' ],
+226 silly audit   '@unrs/resolver-binding-win32-arm64-msvc': [ '1.11.1' ],
+226 silly audit   '@unrs/resolver-binding-win32-ia32-msvc': [ '1.11.1' ],
+226 silly audit   '@unrs/resolver-binding-win32-x64-msvc': [ '1.11.1' ],
+226 silly audit   acorn: [ '8.16.0' ],
+226 silly audit   'acorn-jsx': [ '5.3.2' ],
+226 silly audit   'ansi-styles': [ '4.3.0' ],
+226 silly audit   argparse: [ '2.0.1' ],
+226 silly audit   'aria-query': [ '5.3.2' ],
+226 silly audit   'array-buffer-byte-length': [ '1.0.2' ],
+226 silly audit   'array-includes': [ '3.1.9' ],
+226 silly audit   'array.prototype.findlast': [ '1.2.5' ],
+226 silly audit   'array.prototype.findlastindex': [ '1.2.6' ],
+226 silly audit   'array.prototype.flat': [ '1.3.3' ],
+226 silly audit   'array.prototype.flatmap': [ '1.3.3' ],
+226 silly audit   'array.prototype.tosorted': [ '1.1.4' ],
+226 silly audit   'arraybuffer.prototype.slice': [ '1.0.4' ],
+226 silly audit   'ast-types-flow': [ '0.0.8' ],
+226 silly audit   'async-function': [ '1.0.0' ],
+226 silly audit   'available-typed-arrays': [ '1.0.7' ],
+226 silly audit   'aws-ssl-profiles': [ '1.1.2' ],
+226 silly audit   'axe-core': [ '4.11.2' ],
+226 silly audit   'axobject-query': [ '4.1.0' ],
+226 silly audit   'baseline-browser-mapping': [ '2.10.17' ],
+226 silly audit   'better-result': [ '2.8.2' ],
+226 silly audit   braces: [ '3.0.3' ],
+226 silly audit   browserslist: [ '4.28.2' ],
+226 silly audit   c12: [ '3.1.0' ],
+226 silly audit   'call-bind': [ '1.0.9' ],
+226 silly audit   'call-bind-apply-helpers': [ '1.0.2' ],
+226 silly audit   'call-bound': [ '1.0.4' ],
+226 silly audit   callsites: [ '3.1.0' ],
+226 silly audit   'caniuse-lite': [ '1.0.30001787' ],
+226 silly audit   chalk: [ '4.1.2' ],
+226 silly audit   'chart.js': [ '4.5.1' ],
+226 silly audit   chokidar: [ '4.0.3' ],
+226 silly audit   citty: [ '0.1.6', '0.2.2' ],
+226 silly audit   'client-only': [ '0.0.1' ],
+226 silly audit   'color-convert': [ '2.0.1' ],
+226 silly audit   'color-name': [ '1.1.4' ],
+226 silly audit   'concat-map': [ '0.0.1' ],
+226 silly audit   confbox: [ '0.2.4' ],
+226 silly audit   consola: [ '3.4.2' ],
+226 silly audit   'convert-source-map': [ '2.0.0' ],
+226 silly audit   'cross-spawn': [ '7.0.6' ],
+226 silly audit   csstype: [ '3.2.3' ],
+226 silly audit   'damerau-levenshtein': [ '1.0.8' ],
+226 silly audit   'data-view-buffer': [ '1.0.2' ],
+226 silly audit   'data-view-byte-length': [ '1.0.2' ],
+226 silly audit   'data-view-byte-offset': [ '1.0.1' ],
+226 silly audit   debug: [ '4.4.3', '3.2.7' ],
+226 silly audit   'deep-is': [ '0.1.4' ],
+226 silly audit   'deepmerge-ts': [ '7.1.5' ],
+226 silly audit   'define-data-property': [ '1.1.4' ],
+226 silly audit   'define-properties': [ '1.2.1' ],
+226 silly audit   defu: [ '6.1.7' ],
+226 silly audit   denque: [ '2.1.0' ],
+226 silly audit   destr: [ '2.0.5' ],
+226 silly audit   'detect-libc': [ '2.1.2' ],
+226 silly audit   doctrine: [ '2.1.0' ],
+226 silly audit   dotenv: [ '16.6.1' ],
+226 silly audit   'dunder-proto': [ '1.0.1' ],
+226 silly audit   effect: [ '3.20.0' ],
+226 silly audit   'electron-to-chromium': [ '1.5.334' ],
+226 silly audit   'emoji-regex': [ '9.2.2' ],
+226 silly audit   empathic: [ '2.0.0' ],
+226 silly audit   'enhanced-resolve': [ '5.20.1' ],
+226 silly audit   'env-paths': [ '3.0.0' ],
+226 silly audit   'es-abstract': [ '1.24.2' ],
+226 silly audit   'es-define-property': [ '1.0.1' ],
+226 silly audit   'es-errors': [ '1.3.0' ],
+226 silly audit   'es-iterator-helpers': [ '1.3.2' ],
+226 silly audit   'es-object-atoms': [ '1.1.1' ],
+226 silly audit   'es-set-tostringtag': [ '2.1.0' ],
+226 silly audit   'es-shim-unscopables': [ '1.1.0' ],
+226 silly audit   'es-to-primitive': [ '1.3.0' ],
+226 silly audit   escalade: [ '3.2.0' ],
+226 silly audit   'escape-string-regexp': [ '4.0.0' ],
+226 silly audit   eslint: [ '9.39.4' ],
+226 silly audit   'eslint-config-next': [ '16.2.3' ],
+226 silly audit   globals: [ '16.4.0', '14.0.0' ],
+226 silly audit   'eslint-import-resolver-node': [ '0.3.10' ],
+226 silly audit   'eslint-import-resolver-typescript': [ '3.10.1' ],
+226 silly audit   'eslint-module-utils': [ '2.12.1' ],
+226 silly audit   'eslint-plugin-import': [ '2.32.0' ],
+226 silly audit   'eslint-plugin-jsx-a11y': [ '6.10.2' ],
+226 silly audit   'eslint-plugin-react': [ '7.37.5' ],
+226 silly audit   'eslint-plugin-react-hooks': [ '7.0.1' ],
+226 silly audit   'eslint-scope': [ '8.4.0' ],
+226 silly audit   espree: [ '10.4.0' ],
+226 silly audit   esquery: [ '1.7.0' ],
+226 silly audit   esrecurse: [ '4.3.0' ],
+226 silly audit   estraverse: [ '5.3.0' ],
+226 silly audit   esutils: [ '2.0.3' ],
+226 silly audit   exsolve: [ '1.0.8' ],
+226 silly audit   'fast-check': [ '3.23.2' ],
+226 silly audit   'fast-deep-equal': [ '3.1.3' ],
+226 silly audit   'fast-glob': [ '3.3.1' ],
+226 silly audit   'glob-parent': [ '5.1.2', '6.0.2' ],
+226 silly audit   'fast-json-stable-stringify': [ '2.1.0' ],
+226 silly audit   'fast-levenshtein': [ '2.0.6' ],
+226 silly audit   'fast-uri': [ '3.1.0' ],
+226 silly audit   fastq: [ '1.20.1' ],
+226 silly audit   'file-entry-cache': [ '8.0.0' ],
+226 silly audit   'fill-range': [ '7.1.1' ],
+226 silly audit   'find-up': [ '5.0.0' ],
+226 silly audit   'flat-cache': [ '4.0.1' ],
+226 silly audit   flatted: [ '3.4.2' ],
+226 silly audit   'for-each': [ '0.3.5' ],
+226 silly audit   'foreground-child': [ '3.3.1' ],
+226 silly audit   'function-bind': [ '1.1.2' ],
+226 silly audit   'function.prototype.name': [ '1.1.8' ],
+226 silly audit   'functions-have-names': [ '1.2.3' ],
+226 silly audit   'generate-function': [ '2.3.1' ],
+226 silly audit   'generator-function': [ '2.0.1' ],
+226 silly audit   gensync: [ '1.0.0-beta.2' ],
+226 silly audit   'get-intrinsic': [ '1.3.0' ],
+226 silly audit   'get-port-please': [ '3.2.0' ],
+226 silly audit   'get-proto': [ '1.0.1' ],
+226 silly audit   'get-symbol-description': [ '1.1.0' ],
+226 silly audit   'get-tsconfig': [ '4.13.7' ],
+226 silly audit   giget: [ '2.0.0' ],
+226 silly audit   globalthis: [ '1.0.4' ],
+226 silly audit   gopd: [ '1.2.0' ],
+226 silly audit   'graceful-fs': [ '4.2.11' ],
+226 silly audit   grammex: [ '3.1.12' ],
+226 silly audit   graphmatch: [ '1.1.1' ],
+226 silly audit   'has-bigints': [ '1.1.0' ],
+226 silly audit   'has-flag': [ '4.0.0' ],
+226 silly audit   'has-property-descriptors': [ '1.0.2' ],
+226 silly audit   'has-proto': [ '1.2.0' ],
+226 silly audit   'has-symbols': [ '1.1.0' ],
+226 silly audit   'has-tostringtag': [ '1.0.2' ],
+226 silly audit   hasown: [ '2.0.2' ],
+226 silly audit   'hermes-estree': [ '0.25.1' ],
+226 silly audit   'hermes-parser': [ '0.25.1' ],
+226 silly audit   hono: [ '4.12.12' ],
+226 silly audit   'http-status-codes': [ '2.3.0' ],
+226 silly audit   'iconv-lite': [ '0.7.2' ],
+226 silly audit   'import-fresh': [ '3.3.1' ],
+226 silly audit   imurmurhash: [ '0.1.4' ],
+226 silly audit   'internal-slot': [ '1.1.0' ],
+226 silly audit   'is-array-buffer': [ '3.0.5' ],
+226 silly audit   'is-async-function': [ '2.1.1' ],
+226 silly audit   'is-bigint': [ '1.1.0' ],
+226 silly audit   'is-boolean-object': [ '1.2.2' ],
+226 silly audit   'is-bun-module': [ '2.0.0' ],
+226 silly audit   'is-callable': [ '1.2.7' ],
+226 silly audit   'is-core-module': [ '2.16.1' ],
+226 silly audit   'is-data-view': [ '1.0.2' ],
+226 silly audit   'is-date-object': [ '1.1.0' ],
+226 silly audit   'is-extglob': [ '2.1.1' ],
+226 silly audit   'is-finalizationregistry': [ '1.1.1' ],
+226 silly audit   'is-generator-function': [ '1.1.2' ],
+226 silly audit   'is-glob': [ '4.0.3' ],
+226 silly audit   'is-map': [ '2.0.3' ],
+226 silly audit   'is-negative-zero': [ '2.0.3' ],
+226 silly audit   'is-number': [ '7.0.0' ],
+226 silly audit   'is-number-object': [ '1.1.1' ],
+226 silly audit   'is-property': [ '1.0.2' ],
+226 silly audit   'is-regex': [ '1.2.1' ],
+226 silly audit   'is-set': [ '2.0.3' ],
+226 silly audit   'is-shared-array-buffer': [ '1.0.4' ],
+226 silly audit   'is-string': [ '1.1.1' ],
+226 silly audit   'is-symbol': [ '1.1.1' ],
+226 silly audit   'is-typed-array': [ '1.1.15' ],
+226 silly audit   'is-weakmap': [ '2.0.2' ],
+226 silly audit   'is-weakref': [ '1.1.1' ],
+226 silly audit   'is-weakset': [ '2.0.4' ],
+226 silly audit   isarray: [ '2.0.5' ],
+226 silly audit   isexe: [ '2.0.0' ],
+226 silly audit   'iterator.prototype': [ '1.1.5' ],
+226 silly audit   jiti: [ '2.6.1' ],
+226 silly audit   'js-tokens': [ '4.0.0' ],
+226 silly audit   'js-yaml': [ '4.1.1' ],
+226 silly audit   jsesc: [ '3.1.0' ],
+226 silly audit   'json-buffer': [ '3.0.1' ],
+226 silly audit   'json-stable-stringify-without-jsonify': [ '1.0.1' ],
+226 silly audit   json5: [ '2.2.3', '1.0.2' ],
+226 silly audit   'jsx-ast-utils': [ '3.3.5' ],
+226 silly audit   keyv: [ '4.5.4' ],
+226 silly audit   'language-subtag-registry': [ '0.3.23' ],
+226 silly audit   'language-tags': [ '1.0.9' ],
+226 silly audit   levn: [ '0.4.1' ],
+226 silly audit   lightningcss: [ '1.32.0' ],
+226 silly audit   'lightningcss-android-arm64': [ '1.32.0' ],
+226 silly audit   'lightningcss-darwin-arm64': [ '1.32.0' ],
+226 silly audit   'lightningcss-darwin-x64': [ '1.32.0' ],
+226 silly audit   'lightningcss-freebsd-x64': [ '1.32.0' ],
+226 silly audit   'lightningcss-linux-arm-gnueabihf': [ '1.32.0' ],
+226 silly audit   'lightningcss-linux-arm64-gnu': [ '1.32.0' ],
+226 silly audit   'lightningcss-linux-arm64-musl': [ '1.32.0' ],
+226 silly audit   'lightningcss-linux-x64-gnu': [ '1.32.0' ],
+226 silly audit   'lightningcss-linux-x64-musl': [ '1.32.0' ],
+226 silly audit   'lightningcss-win32-arm64-msvc': [ '1.32.0' ],
+226 silly audit   'lightningcss-win32-x64-msvc': [ '1.32.0' ],
+226 silly audit   'locate-path': [ '6.0.0' ],
+226 silly audit   'lodash.merge': [ '4.6.2' ],
+226 silly audit   long: [ '5.3.2' ],
+226 silly audit   'loose-envify': [ '1.4.0' ],
+226 silly audit   'lru-cache': [ '5.1.1' ],
+226 silly audit   'lru.min': [ '1.1.4' ],
+226 silly audit   'magic-string': [ '0.30.21' ],
+226 silly audit   'math-intrinsics': [ '1.1.0' ],
+226 silly audit   merge2: [ '1.4.1' ],
+226 silly audit   micromatch: [ '4.0.8' ],
+226 silly audit   minimist: [ '1.2.8' ],
+226 silly audit   ms: [ '2.1.3' ],
+226 silly audit   mysql2: [ '3.15.3' ],
+226 silly audit   'named-placeholders': [ '1.1.6' ],
+226 silly audit   nanoid: [ '3.3.11' ],
+226 silly audit   'napi-postinstall': [ '0.3.4' ],
+226 silly audit   'natural-compare': [ '1.4.0' ],
+226 silly audit   next: [ '16.2.3' ],
+226 silly audit   postcss: [ '8.4.31', '8.5.9' ],
+226 silly audit   'node-exports-info': [ '1.6.0' ],
+226 silly audit   'node-fetch-native': [ '1.6.7' ],
+226 silly audit   'node-releases': [ '2.0.37' ],
+226 silly audit   nypm: [ '0.6.5' ],
+226 silly audit   'object-assign': [ '4.1.1' ],
+226 silly audit   'object-inspect': [ '1.13.4' ],
+226 silly audit   'object-keys': [ '1.1.1' ],
+226 silly audit   'object.assign': [ '4.1.7' ],
+226 silly audit   'object.entries': [ '1.1.9' ],
+226 silly audit   'object.fromentries': [ '2.0.8' ],
+226 silly audit   'object.groupby': [ '1.0.3' ],
+226 silly audit   'object.values': [ '1.2.1' ],
+226 silly audit   ohash: [ '2.0.11' ],
+226 silly audit   optionator: [ '0.9.4' ],
+226 silly audit   'own-keys': [ '1.0.1' ],
+226 silly audit   'p-limit': [ '3.1.0' ],
+226 silly audit   'p-locate': [ '5.0.0' ],
+226 silly audit   'parent-module': [ '1.0.1' ],
+226 silly audit   'path-exists': [ '4.0.0' ],
+226 silly audit   'path-key': [ '3.1.1' ],
+226 silly audit   'path-parse': [ '1.0.7' ],
+226 silly audit   pathe: [ '2.0.3' ],
+226 silly audit   'perfect-debounce': [ '1.0.0' ],
+226 silly audit   picocolors: [ '1.1.1' ],
+226 silly audit   picomatch: [ '2.3.2', '4.0.4' ],
+226 silly audit   'pkg-types': [ '2.3.0' ],
+226 silly audit   'possible-typed-array-names': [ '1.1.0' ],
+226 silly audit   postgres: [ '3.4.7' ],
+226 silly audit   'prelude-ls': [ '1.2.1' ],
+226 silly audit   prisma: [ '7.7.0' ],
+226 silly audit   'prop-types': [ '15.8.1' ],
+226 silly audit   'proper-lockfile': [ '4.1.2' ],
+226 silly audit   'signal-exit': [ '3.0.7', '4.1.0' ],
+226 silly audit   punycode: [ '2.3.1' ],
+226 silly audit   'pure-rand': [ '6.1.0' ],
+226 silly audit   'queue-microtask': [ '1.2.3' ],
+226 silly audit   rc9: [ '2.1.2' ],
+226 silly audit   react: [ '19.2.4' ],
+226 silly audit   'react-dom': [ '19.2.4' ],
+226 silly audit   'react-is': [ '16.13.1' ],
+226 silly audit   readdirp: [ '4.1.2' ],
+226 silly audit   'reflect.getprototypeof': [ '1.0.10' ],
+226 silly audit   'regexp.prototype.flags': [ '1.5.4' ],
+226 silly audit   remeda: [ '2.33.4' ],
+226 silly audit   'require-from-string': [ '2.0.2' ],
+226 silly audit   resolve: [ '2.0.0-next.6' ],
+226 silly audit   'resolve-from': [ '4.0.0' ],
+226 silly audit   'resolve-pkg-maps': [ '1.0.0' ],
+226 silly audit   retry: [ '0.12.0' ],
+226 silly audit   reusify: [ '1.1.0' ],
+226 silly audit   'run-parallel': [ '1.2.0' ],
+226 silly audit   'safe-array-concat': [ '1.1.3' ],
+226 silly audit   'safe-push-apply': [ '1.0.0' ],
+226 silly audit   'safe-regex-test': [ '1.1.0' ],
+226 silly audit   'safer-buffer': [ '2.1.2' ],
+226 silly audit   scheduler: [ '0.27.0' ],
+226 silly audit   'seq-queue': [ '0.0.5' ],
+226 silly audit   'set-function-length': [ '1.2.2' ],
+226 silly audit   'set-function-name': [ '2.0.2' ],
+226 silly audit   'set-proto': [ '1.0.0' ],
+226 silly audit   sharp: [ '0.34.5' ],
+226 silly audit   'shebang-command': [ '2.0.0' ],
+226 silly audit   'shebang-regex': [ '3.0.0' ],
+226 silly audit   'side-channel': [ '1.1.0' ],
+226 silly audit   'side-channel-list': [ '1.0.1' ],
+226 silly audit   'side-channel-map': [ '1.0.1' ],
+226 silly audit   'side-channel-weakmap': [ '1.0.2' ],
+226 silly audit   'source-map-js': [ '1.2.1' ],
+226 silly audit   sqlstring: [ '2.3.3' ],
+226 silly audit   'stable-hash': [ '0.0.5' ],
+226 silly audit   'std-env': [ '3.10.0' ],
+226 silly audit   'stop-iteration-iterator': [ '1.1.0' ],
+226 silly audit   'string.prototype.includes': [ '2.0.1' ],
+226 silly audit   'string.prototype.matchall': [ '4.0.12' ],
+226 silly audit   'string.prototype.repeat': [ '1.0.0' ],
+226 silly audit   'string.prototype.trim': [ '1.2.10' ],
+226 silly audit   'string.prototype.trimend': [ '1.0.9' ],
+226 silly audit   'string.prototype.trimstart': [ '1.0.8' ],
+226 silly audit   'strip-bom': [ '3.0.0' ],
+226 silly audit   'strip-json-comments': [ '3.1.1', '2.0.1' ],
+226 silly audit   'styled-jsx': [ '5.1.6' ],
+226 silly audit   'supports-color': [ '7.2.0' ],
+226 silly audit   'supports-preserve-symlinks-flag': [ '1.0.0' ],
+226 silly audit   tailwindcss: [ '4.2.2' ],
+226 silly audit   tapable: [ '2.3.2' ],
+226 silly audit   tinyexec: [ '1.1.1' ],
+226 silly audit   tinyglobby: [ '0.2.16' ],
+226 silly audit   fdir: [ '6.5.0' ],
+226 silly audit   'to-regex-range': [ '5.0.1' ],
+226 silly audit   'ts-api-utils': [ '2.5.0' ],
+226 silly audit   'tsconfig-paths': [ '3.15.0' ],
+226 silly audit   tslib: [ '2.8.1' ],
+226 silly audit   'type-check': [ '0.4.0' ],
+226 silly audit   'typed-array-buffer': [ '1.0.3' ],
+226 silly audit   'typed-array-byte-length': [ '1.0.3' ],
+226 silly audit   'typed-array-byte-offset': [ '1.0.4' ],
+226 silly audit   'typed-array-length': [ '1.0.7' ],
+226 silly audit   typescript: [ '5.9.3' ],
+226 silly audit   'typescript-eslint': [ '8.58.1' ],
+226 silly audit   'unbox-primitive': [ '1.1.0' ],
+226 silly audit   'undici-types': [ '6.21.0' ],
+226 silly audit   'unrs-resolver': [ '1.11.1' ],
+226 silly audit   'update-browserslist-db': [ '1.2.3' ],
+226 silly audit   'uri-js': [ '4.4.1' ],
+226 silly audit   valibot: [ '1.2.0' ],
+226 silly audit   which: [ '2.0.2' ],
+226 silly audit   'which-boxed-primitive': [ '1.1.1' ],
+226 silly audit   'which-builtin-type': [ '1.2.1' ],
+226 silly audit   'which-collection': [ '1.0.2' ],
+226 silly audit   'which-typed-array': [ '1.1.20' ],
+226 silly audit   'word-wrap': [ '1.2.5' ],
+226 silly audit   yallist: [ '3.1.1' ],
+226 silly audit   'yocto-queue': [ '0.1.0' ],
+226 silly audit   zeptomatch: [ '2.1.0' ],
+226 silly audit   zod: [ '4.3.6' ],
+226 silly audit   'zod-validation-error': [ '4.0.2' ],
+226 silly audit   '@prisma/adapter-better-sqlite3': [ '7.7.0' ],
+226 silly audit   'better-sqlite3': [ '12.8.0' ],
+226 silly audit   '@prisma/driver-adapter-utils': [ '7.7.0' ],
+226 silly audit   bindings: [ '1.5.0' ],
+226 silly audit   'prebuild-install': [ '7.1.3' ],
+226 silly audit   'file-uri-to-path': [ '1.0.0' ],
+226 silly audit   'expand-template': [ '2.0.3' ],
+226 silly audit   'github-from-package': [ '0.0.0' ],
+226 silly audit   'mkdirp-classic': [ '0.5.3' ],
+226 silly audit   'napi-build-utils': [ '2.0.0' ],
+226 silly audit   'node-abi': [ '3.89.0' ],
+226 silly audit   pump: [ '3.0.4' ],
+226 silly audit   rc: [ '1.2.8' ],
+226 silly audit   'simple-get': [ '4.0.1' ],
+226 silly audit   'tar-fs': [ '2.1.4' ],
+226 silly audit   'tunnel-agent': [ '0.6.0' ],
+226 silly audit   'end-of-stream': [ '1.4.5' ],
+226 silly audit   once: [ '1.4.0' ],
+226 silly audit   wrappy: [ '1.0.2' ],
+226 silly audit   'deep-extend': [ '0.6.0' ],
+226 silly audit   ini: [ '1.3.8' ],
+226 silly audit   'decompress-response': [ '6.0.0' ],
+226 silly audit   'simple-concat': [ '1.0.1' ],
+226 silly audit   'mimic-response': [ '3.1.0' ],
+226 silly audit   chownr: [ '1.1.4' ],
+226 silly audit   'tar-stream': [ '2.2.0' ],
+226 silly audit   bl: [ '4.1.0' ],
+226 silly audit   'fs-constants': [ '1.0.0' ],
+226 silly audit   inherits: [ '2.0.4' ],
+226 silly audit   'readable-stream': [ '3.6.2' ],
+226 silly audit   buffer: [ '5.7.1' ],
+226 silly audit   'base64-js': [ '1.5.1' ],
+226 silly audit   ieee754: [ '1.2.1' ],
+226 silly audit   string_decoder: [ '1.3.0' ],
+226 silly audit   'util-deprecate': [ '1.0.2' ],
+226 silly audit   'safe-buffer': [ '5.2.1' ]
+226 silly audit }
+227 http cache string_decoder@https://registry.npmjs.org/string_decoder/-/string_decoder-1.3.0.tgz 0ms (cache hit)
+228 http cache safe-buffer@https://registry.npmjs.org/safe-buffer/-/safe-buffer-5.2.1.tgz 0ms (cache hit)
+229 http cache util-deprecate@https://registry.npmjs.org/util-deprecate/-/util-deprecate-1.0.2.tgz 0ms (cache hit)
+230 http cache base64-js@https://registry.npmjs.org/base64-js/-/base64-js-1.5.1.tgz 0ms (cache hit)
+231 http cache readable-stream@https://registry.npmjs.org/readable-stream/-/readable-stream-3.6.2.tgz 0ms (cache hit)
+232 http cache ieee754@https://registry.npmjs.org/ieee754/-/ieee754-1.2.1.tgz 0ms (cache hit)
+233 http cache buffer@https://registry.npmjs.org/buffer/-/buffer-5.7.1.tgz 0ms (cache hit)
+234 http cache fs-constants@https://registry.npmjs.org/fs-constants/-/fs-constants-1.0.0.tgz 0ms (cache hit)
+235 http cache bl@https://registry.npmjs.org/bl/-/bl-4.1.0.tgz 0ms (cache hit)
+236 http cache inherits@https://registry.npmjs.org/inherits/-/inherits-2.0.4.tgz 0ms (cache hit)
+237 http cache tar-stream@https://registry.npmjs.org/tar-stream/-/tar-stream-2.2.0.tgz 0ms (cache hit)
+238 http cache chownr@https://registry.npmjs.org/chownr/-/chownr-1.1.4.tgz 0ms (cache hit)
+239 http cache simple-concat@https://registry.npmjs.org/simple-concat/-/simple-concat-1.0.1.tgz 0ms (cache hit)
+240 http cache decompress-response@https://registry.npmjs.org/decompress-response/-/decompress-response-6.0.0.tgz 0ms (cache hit)
+241 http cache deep-extend@https://registry.npmjs.org/deep-extend/-/deep-extend-0.6.0.tgz 0ms (cache hit)
+242 http cache ini@https://registry.npmjs.org/ini/-/ini-1.3.8.tgz 0ms (cache hit)
+243 http cache mimic-response@https://registry.npmjs.org/mimic-response/-/mimic-response-3.1.0.tgz 0ms (cache hit)
+244 http cache wrappy@https://registry.npmjs.org/wrappy/-/wrappy-1.0.2.tgz 0ms (cache hit)
+245 http cache end-of-stream@https://registry.npmjs.org/end-of-stream/-/end-of-stream-1.4.5.tgz 0ms (cache hit)
+246 http cache tar-fs@https://registry.npmjs.org/tar-fs/-/tar-fs-2.1.4.tgz 0ms (cache hit)
+247 http cache once@https://registry.npmjs.org/once/-/once-1.4.0.tgz 0ms (cache hit)
+248 http cache simple-get@https://registry.npmjs.org/simple-get/-/simple-get-4.0.1.tgz 0ms (cache hit)
+249 http cache pump@https://registry.npmjs.org/pump/-/pump-3.0.4.tgz 0ms (cache hit)
+250 http cache node-abi@https://registry.npmjs.org/node-abi/-/node-abi-3.89.0.tgz 0ms (cache hit)
+251 http cache tunnel-agent@https://registry.npmjs.org/tunnel-agent/-/tunnel-agent-0.6.0.tgz 0ms (cache hit)
+252 http cache rc@https://registry.npmjs.org/rc/-/rc-1.2.8.tgz 0ms (cache hit)
+253 http cache napi-build-utils@https://registry.npmjs.org/napi-build-utils/-/napi-build-utils-2.0.0.tgz 0ms (cache hit)
+254 http cache mkdirp-classic@https://registry.npmjs.org/mkdirp-classic/-/mkdirp-classic-0.5.3.tgz 0ms (cache hit)
+255 http cache file-uri-to-path@https://registry.npmjs.org/file-uri-to-path/-/file-uri-to-path-1.0.0.tgz 0ms (cache hit)
+256 http cache github-from-package@https://registry.npmjs.org/github-from-package/-/github-from-package-0.0.0.tgz 0ms (cache hit)
+257 http cache expand-template@https://registry.npmjs.org/expand-template/-/expand-template-2.0.3.tgz 0ms (cache hit)
+258 http cache bindings@https://registry.npmjs.org/bindings/-/bindings-1.5.0.tgz 0ms (cache hit)
+259 http cache @prisma/driver-adapter-utils@https://registry.npmjs.org/@prisma/driver-adapter-utils/-/driver-adapter-utils-7.7.0.tgz 0ms (cache hit)
+260 http cache strip-json-comments@https://registry.npmjs.org/strip-json-comments/-/strip-json-comments-2.0.1.tgz 0ms (cache hit)
+261 http cache prebuild-install@https://registry.npmjs.org/prebuild-install/-/prebuild-install-7.1.3.tgz 0ms (cache hit)
+262 http cache better-sqlite3@https://registry.npmjs.org/better-sqlite3/-/better-sqlite3-12.8.0.tgz 0ms (cache hit)
+263 http cache @prisma/adapter-better-sqlite3@https://registry.npmjs.org/@prisma/adapter-better-sqlite3/-/adapter-better-sqlite3-7.7.0.tgz 0ms (cache hit)
+264 http cache semver@https://registry.npmjs.org/semver/-/semver-7.7.4.tgz 0ms (cache hit)
+265 silly tarball no local data for string_decoder@https://registry.npmjs.org/string_decoder/-/string_decoder-1.3.0.tgz. Extracting by manifest.
+266 silly tarball no local data for safe-buffer@https://registry.npmjs.org/safe-buffer/-/safe-buffer-5.2.1.tgz. Extracting by manifest.
+267 silly tarball no local data for util-deprecate@https://registry.npmjs.org/util-deprecate/-/util-deprecate-1.0.2.tgz. Extracting by manifest.
+268 silly tarball no local data for base64-js@https://registry.npmjs.org/base64-js/-/base64-js-1.5.1.tgz. Extracting by manifest.
+269 silly tarball no local data for readable-stream@https://registry.npmjs.org/readable-stream/-/readable-stream-3.6.2.tgz. Extracting by manifest.
+270 silly tarball no local data for ieee754@https://registry.npmjs.org/ieee754/-/ieee754-1.2.1.tgz. Extracting by manifest.
+271 silly tarball no local data for buffer@https://registry.npmjs.org/buffer/-/buffer-5.7.1.tgz. Extracting by manifest.
+272 silly tarball no local data for fs-constants@https://registry.npmjs.org/fs-constants/-/fs-constants-1.0.0.tgz. Extracting by manifest.
+273 silly tarball no local data for bl@https://registry.npmjs.org/bl/-/bl-4.1.0.tgz. Extracting by manifest.
+274 silly tarball no local data for inherits@https://registry.npmjs.org/inherits/-/inherits-2.0.4.tgz. Extracting by manifest.
+275 silly tarball no local data for tar-stream@https://registry.npmjs.org/tar-stream/-/tar-stream-2.2.0.tgz. Extracting by manifest.
+276 silly tarball no local data for chownr@https://registry.npmjs.org/chownr/-/chownr-1.1.4.tgz. Extracting by manifest.
+277 silly tarball no local data for simple-concat@https://registry.npmjs.org/simple-concat/-/simple-concat-1.0.1.tgz. Extracting by manifest.
+278 silly tarball no local data for decompress-response@https://registry.npmjs.org/decompress-response/-/decompress-response-6.0.0.tgz. Extracting by manifest.
+279 silly tarball no local data for deep-extend@https://registry.npmjs.org/deep-extend/-/deep-extend-0.6.0.tgz. Extracting by manifest.
+280 silly tarball no local data for ini@https://registry.npmjs.org/ini/-/ini-1.3.8.tgz. Extracting by manifest.
+281 silly tarball no local data for mimic-response@https://registry.npmjs.org/mimic-response/-/mimic-response-3.1.0.tgz. Extracting by manifest.
+282 silly tarball no local data for wrappy@https://registry.npmjs.org/wrappy/-/wrappy-1.0.2.tgz. Extracting by manifest.
+283 silly tarball no local data for end-of-stream@https://registry.npmjs.org/end-of-stream/-/end-of-stream-1.4.5.tgz. Extracting by manifest.
+284 silly tarball no local data for tar-fs@https://registry.npmjs.org/tar-fs/-/tar-fs-2.1.4.tgz. Extracting by manifest.
+285 silly tarball no local data for once@https://registry.npmjs.org/once/-/once-1.4.0.tgz. Extracting by manifest.
+286 silly tarball no local data for simple-get@https://registry.npmjs.org/simple-get/-/simple-get-4.0.1.tgz. Extracting by manifest.
+287 silly tarball no local data for pump@https://registry.npmjs.org/pump/-/pump-3.0.4.tgz. Extracting by manifest.
+288 silly tarball no local data for node-abi@https://registry.npmjs.org/node-abi/-/node-abi-3.89.0.tgz. Extracting by manifest.
+289 silly tarball no local data for tunnel-agent@https://registry.npmjs.org/tunnel-agent/-/tunnel-agent-0.6.0.tgz. Extracting by manifest.
+290 silly tarball no local data for rc@https://registry.npmjs.org/rc/-/rc-1.2.8.tgz. Extracting by manifest.
+291 silly tarball no local data for napi-build-utils@https://registry.npmjs.org/napi-build-utils/-/napi-build-utils-2.0.0.tgz. Extracting by manifest.
+292 silly tarball no local data for mkdirp-classic@https://registry.npmjs.org/mkdirp-classic/-/mkdirp-classic-0.5.3.tgz. Extracting by manifest.
+293 silly tarball no local data for file-uri-to-path@https://registry.npmjs.org/file-uri-to-path/-/file-uri-to-path-1.0.0.tgz. Extracting by manifest.
+294 silly tarball no local data for github-from-package@https://registry.npmjs.org/github-from-package/-/github-from-package-0.0.0.tgz. Extracting by manifest.
+295 silly tarball no local data for expand-template@https://registry.npmjs.org/expand-template/-/expand-template-2.0.3.tgz. Extracting by manifest.
+296 silly tarball no local data for bindings@https://registry.npmjs.org/bindings/-/bindings-1.5.0.tgz. Extracting by manifest.
+297 silly tarball no local data for @prisma/driver-adapter-utils@https://registry.npmjs.org/@prisma/driver-adapter-utils/-/driver-adapter-utils-7.7.0.tgz. Extracting by manifest.
+298 silly tarball no local data for strip-json-comments@https://registry.npmjs.org/strip-json-comments/-/strip-json-comments-2.0.1.tgz. Extracting by manifest.
+299 silly tarball no local data for prebuild-install@https://registry.npmjs.org/prebuild-install/-/prebuild-install-7.1.3.tgz. Extracting by manifest.
+300 silly tarball no local data for better-sqlite3@https://registry.npmjs.org/better-sqlite3/-/better-sqlite3-12.8.0.tgz. Extracting by manifest.
+301 silly tarball no local data for @prisma/adapter-better-sqlite3@https://registry.npmjs.org/@prisma/adapter-better-sqlite3/-/adapter-better-sqlite3-7.7.0.tgz. Extracting by manifest.
+302 http fetch GET 200 https://registry.npmjs.org/util-deprecate/-/util-deprecate-1.0.2.tgz 122ms (cache miss)
+303 http fetch GET 200 https://registry.npmjs.org/string_decoder/-/string_decoder-1.3.0.tgz 125ms (cache miss)
+304 http fetch GET 200 https://registry.npmjs.org/ieee754/-/ieee754-1.2.1.tgz 197ms (cache miss)
+305 http fetch GET 200 https://registry.npmjs.org/deep-extend/-/deep-extend-0.6.0.tgz 200ms (cache miss)
+306 http fetch GET 200 https://registry.npmjs.org/safe-buffer/-/safe-buffer-5.2.1.tgz 206ms (cache miss)
+307 http fetch GET 200 https://registry.npmjs.org/base64-js/-/base64-js-1.5.1.tgz 211ms (cache miss)
+308 http fetch POST 200 https://registry.npmjs.org/-/npm/v1/security/advisories/bulk 255ms
+309 silly audit report {
+309 silly audit report   '@hono/node-server': [
+309 silly audit report     {
+309 silly audit report       id: 1116281,
+309 silly audit report       url: 'https://github.com/advisories/GHSA-92pp-h63x-v22m',
+309 silly audit report       title: '@hono/node-server: Middleware bypass via repeated slashes in serveStatic',
+309 silly audit report       severity: 'moderate',
+309 silly audit report       vulnerable_versions: '<1.19.13',
+309 silly audit report       cwe: [Array],
+309 silly audit report       cvss: [Object]
+309 silly audit report     }
+309 silly audit report   ]
+309 silly audit report }
+310 silly packumentCache corgi:https://registry.npmjs.org/@hono%2fnode-server cache-miss
+311 http fetch GET 200 https://registry.npmjs.org/end-of-stream/-/end-of-stream-1.4.5.tgz 227ms (cache miss)
+312 http fetch GET 200 https://registry.npmjs.org/wrappy/-/wrappy-1.0.2.tgz 227ms (cache miss)
+313 http fetch GET 200 https://registry.npmjs.org/mimic-response/-/mimic-response-3.1.0.tgz 228ms (cache miss)
+314 http fetch GET 200 https://registry.npmjs.org/ini/-/ini-1.3.8.tgz 275ms (cache miss)
+315 http fetch GET 200 https://registry.npmjs.org/once/-/once-1.4.0.tgz 372ms (cache miss)
+316 http fetch GET 200 https://registry.npmjs.org/pump/-/pump-3.0.4.tgz 385ms (cache miss)
+317 http fetch GET 200 https://registry.npmjs.org/tunnel-agent/-/tunnel-agent-0.6.0.tgz 390ms (cache miss)
+318 http fetch GET 200 https://registry.npmjs.org/chownr/-/chownr-1.1.4.tgz 396ms (cache miss)
+319 http fetch GET 200 https://registry.npmjs.org/fs-constants/-/fs-constants-1.0.0.tgz 405ms (cache miss)
+320 http fetch GET 200 https://registry.npmjs.org/inherits/-/inherits-2.0.4.tgz 406ms (cache miss)
+321 http fetch GET 200 https://registry.npmjs.org/expand-template/-/expand-template-2.0.3.tgz 398ms (cache miss)
+322 http fetch GET 200 https://registry.npmjs.org/file-uri-to-path/-/file-uri-to-path-1.0.0.tgz 401ms (cache miss)
+323 http fetch GET 200 https://registry.npmjs.org/node-abi/-/node-abi-3.89.0.tgz 403ms (cache miss)
+324 http fetch GET 200 https://registry.npmjs.org/bindings/-/bindings-1.5.0.tgz 403ms (cache miss)
+325 http fetch GET 200 https://registry.npmjs.org/mkdirp-classic/-/mkdirp-classic-0.5.3.tgz 408ms (cache miss)
+326 http fetch GET 200 https://registry.npmjs.org/decompress-response/-/decompress-response-6.0.0.tgz 416ms (cache miss)
+327 http fetch GET 200 https://registry.npmjs.org/simple-concat/-/simple-concat-1.0.1.tgz 421ms (cache miss)
+328 http fetch GET 200 https://registry.npmjs.org/strip-json-comments/-/strip-json-comments-2.0.1.tgz 412ms (cache miss)
+329 http fetch GET 200 https://registry.npmjs.org/simple-get/-/simple-get-4.0.1.tgz 425ms (cache miss)
+330 http fetch GET 200 https://registry.npmjs.org/napi-build-utils/-/napi-build-utils-2.0.0.tgz 428ms (cache miss)
+331 http fetch GET 200 https://registry.npmjs.org/tar-stream/-/tar-stream-2.2.0.tgz 450ms (cache miss)
+332 http fetch GET 200 https://registry.npmjs.org/buffer/-/buffer-5.7.1.tgz 464ms (cache miss)
+333 http fetch GET 200 https://registry.npmjs.org/rc/-/rc-1.2.8.tgz 462ms (cache miss)
+334 http fetch GET 200 https://registry.npmjs.org/@prisma/driver-adapter-utils/-/driver-adapter-utils-7.7.0.tgz 466ms (cache miss)
+335 http fetch GET 200 https://registry.npmjs.org/@prisma/adapter-better-sqlite3/-/adapter-better-sqlite3-7.7.0.tgz 466ms (cache miss)
+336 http fetch GET 200 https://registry.npmjs.org/bl/-/bl-4.1.0.tgz 480ms (cache miss)
+337 http fetch GET 200 https://registry.npmjs.org/github-from-package/-/github-from-package-0.0.0.tgz 474ms (cache miss)
+338 http fetch GET 200 https://registry.npmjs.org/prebuild-install/-/prebuild-install-7.1.3.tgz 471ms (cache miss)
+339 warn deprecated prebuild-install@7.1.3: No longer maintained. Please contact the author of the relevant native addon; alternatives are available.
+340 http fetch GET 200 https://registry.npmjs.org/tar-fs/-/tar-fs-2.1.4.tgz 513ms (cache miss)
+341 http fetch GET 200 https://registry.npmjs.org/readable-stream/-/readable-stream-3.6.2.tgz 550ms (cache miss)
+342 http fetch GET 200 https://registry.npmjs.org/@hono%2fnode-server 335ms (cache revalidated)
+343 silly packumentCache corgi:https://registry.npmjs.org/@hono%2fnode-server set size:84452 disposed:false
+344 silly packumentCache corgi:https://registry.npmjs.org/@prisma%2fdev cache-miss
+345 http fetch GET 200 https://registry.npmjs.org/better-sqlite3/-/better-sqlite3-12.8.0.tgz 753ms (cache miss)
+346 info run better-sqlite3@12.8.0 install node_modules/better-sqlite3 prebuild-install || node-gyp rebuild --release
+347 http fetch GET 200 https://registry.npmjs.org/@prisma%2fdev 308ms (cache revalidated)
+348 silly packumentCache corgi:https://registry.npmjs.org/@prisma%2fdev set size:959256 disposed:false
+349 silly packumentCache corgi:https://registry.npmjs.org/prisma cache-miss
+350 http fetch GET 200 https://registry.npmjs.org/prisma 1889ms (cache revalidated)
+351 silly packumentCache corgi:https://registry.npmjs.org/prisma set size:22769242 disposed:false
+352 silly packumentCache corgi:https://registry.npmjs.org/@prisma%2fclient cache-miss
+353 info run better-sqlite3@12.8.0 install { code: 0, signal: null }
+354 http fetch GET 200 https://registry.npmjs.org/@prisma%2fclient 8371ms (cache revalidated)
+355 silly packumentCache corgi:https://registry.npmjs.org/@prisma%2fclient set size:37741727 disposed:false
+356 silly ADD node_modules/safe-buffer
+357 silly ADD node_modules/util-deprecate
+358 silly ADD node_modules/string_decoder
+359 silly ADD node_modules/ieee754
+360 silly ADD node_modules/base64-js
+361 silly ADD node_modules/buffer
+362 silly ADD node_modules/readable-stream
+363 silly ADD node_modules/inherits
+364 silly ADD node_modules/fs-constants
+365 silly ADD node_modules/bl
+366 silly ADD node_modules/tar-stream
+367 silly ADD node_modules/chownr
+368 silly ADD node_modules/mimic-response
+369 silly ADD node_modules/simple-concat
+370 silly ADD node_modules/decompress-response
+371 silly ADD node_modules/ini
+372 silly ADD node_modules/deep-extend
+373 silly ADD node_modules/wrappy
+374 silly ADD node_modules/once
+375 silly ADD node_modules/end-of-stream
+376 silly ADD node_modules/tunnel-agent
+377 silly ADD node_modules/tar-fs
+378 silly ADD node_modules/simple-get
+379 silly ADD node_modules/rc
+380 silly ADD node_modules/rc/node_modules/strip-json-comments
+381 silly ADD node_modules/pump
+382 silly ADD node_modules/node-abi
+383 silly ADD node_modules/node-abi/node_modules/semver
+384 silly ADD node_modules/napi-build-utils
+385 silly ADD node_modules/mkdirp-classic
+386 silly ADD node_modules/github-from-package
+387 silly ADD node_modules/expand-template
+388 silly ADD node_modules/file-uri-to-path
+389 silly ADD node_modules/prebuild-install
+390 silly ADD node_modules/bindings
+391 silly ADD node_modules/@prisma/driver-adapter-utils
+392 silly ADD node_modules/better-sqlite3
+393 silly ADD node_modules/@prisma/adapter-better-sqlite3
+394 verbose cwd D:\SITES\CONTROLE
+395 verbose os Windows_NT 10.0.26200
+396 verbose node v24.14.1
+397 verbose npm  v11.11.0
+398 verbose exit 0
+399 info ok

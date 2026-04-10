@@ -23,6 +23,16 @@ type HomeProps = {
   }>;
 };
 
+type LoadDashboardResult =
+  | {
+      ok: true;
+      data: Awaited<ReturnType<typeof getDashboardData>>;
+    }
+  | {
+      ok: false;
+      message: string;
+    };
+
 function StatCard({
   title,
   value,
@@ -41,12 +51,64 @@ function StatCard({
   );
 }
 
+async function loadDashboardData(competence: string): Promise<LoadDashboardResult> {
+  try {
+    const data = await getDashboardData(competence);
+    return { ok: true, data };
+  } catch (error) {
+    console.error("Failed to load dashboard data", error);
+
+    return {
+      ok: false,
+      message:
+        "Nao foi possivel carregar os dados do painel. Verifique a variavel DATABASE_URL no deploy e a conectividade com o banco PostgreSQL do Supabase.",
+    };
+  }
+}
+
 export default async function Home({ searchParams }: HomeProps) {
   const params = (await searchParams) ?? {};
   const competence = parseCompetence(params.month);
   const previousCompetence = shiftCompetence(competence, -1);
   const nextCompetence = shiftCompetence(competence, 1);
-  const data = await getDashboardData(competence);
+  const dashboardResult = await loadDashboardData(competence);
+
+  if (!dashboardResult.ok) {
+    return (
+      <main className="soft-grid min-h-screen px-4 py-6 sm:px-6 lg:px-10">
+        <div className="mx-auto flex w-full max-w-4xl flex-col gap-6">
+          <section className="glass-card rounded-[36px] px-6 py-8 sm:px-8 lg:px-10 lg:py-10">
+            <div className="inline-flex rounded-full border border-[var(--border)] bg-white/8 px-4 py-2 text-xs font-medium uppercase tracking-[0.28em] text-[var(--muted)]">
+              Falha na conexao com o banco
+            </div>
+            <h1 className="section-title mt-5 text-4xl font-extrabold leading-none text-[var(--accent)] sm:text-5xl">
+              2AControle
+            </h1>
+            <p className="mt-5 max-w-2xl text-base leading-7 text-[var(--muted)] sm:text-lg">
+              {dashboardResult.message}
+            </p>
+            <div className="mt-6 rounded-[28px] border border-[var(--border)] bg-[var(--card-strong)] p-6">
+              <p className="text-sm uppercase tracking-[0.24em] text-[var(--muted)]">
+                Competencia solicitada
+              </p>
+              <strong className="section-title mt-3 block text-3xl capitalize">
+                {getCompetenceLabel(competence)}
+              </strong>
+              <p className="mt-4 text-sm leading-6 text-[var(--muted)]">
+                Configure no ambiente de producao a string de conexao do Supabase em
+                {" "}
+                <code>DATABASE_URL</code>
+                {" "}
+                e refaca o deploy.
+              </p>
+            </div>
+          </section>
+        </div>
+      </main>
+    );
+  }
+
+  const { data } = dashboardResult;
 
   return (
     <main className="soft-grid min-h-screen px-4 py-6 sm:px-6 lg:px-10">

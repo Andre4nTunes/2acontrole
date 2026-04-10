@@ -486,6 +486,7 @@ export type ClientPaymentCreateOrConnectWithoutClientInput = {
 
 export type ClientPaymentCreateManyClientInputEnvelope = {
   data: Prisma.ClientPaymentCreateManyClientInput | Prisma.ClientPaymentCreateManyClientInput[]
+  skipDuplicates?: boolean
 }
 
 export type ClientPaymentUpsertWithWhereUniqueWithoutClientInput = {
@@ -1286,6 +1287,7 @@ export type ClientPaymentCreateManyArgs<ExtArgs extends runtime.Types.Extensions
    * The data used to create many ClientPayments.
    */
   data: Prisma.ClientPaymentCreateManyInput | Prisma.ClientPaymentCreateManyInput[]
+  skipDuplicates?: boolean
 }
 
 /**
@@ -1304,6 +1306,7 @@ export type ClientPaymentCreateManyAndReturnArgs<ExtArgs extends runtime.Types.E
    * The data used to create many ClientPayments.
    */
   data: Prisma.ClientPaymentCreateManyInput | Prisma.ClientPaymentCreateManyInput[]
+  skipDuplicates?: boolean
   /**
    * Choose, which related nodes to fetch as well
    */

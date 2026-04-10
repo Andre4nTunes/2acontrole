@@ -1,4 +1,24 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+## Banco de dados
+
+O projeto usa Prisma com PostgreSQL no Supabase.
+
+Preencha o `.env` com as conexoes do projeto:
+
+```env
+DATABASE_URL="postgresql://..."
+DIRECT_URL="postgresql://..."
+NEXT_PUBLIC_SUPABASE_URL="https://SEU-PROJETO.supabase.co"
+NEXT_PUBLIC_SUPABASE_ANON_KEY="..."
+```
+
+Depois execute:
+
+```bash
+npm run db:generate
+npm run db:push
+```
+
+## Aplicacao
 
 ## Getting Started
 

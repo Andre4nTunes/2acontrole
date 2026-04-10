@@ -456,6 +456,7 @@ export type ExpenseSettlementCreateOrConnectWithoutExpenseInput = {
 
 export type ExpenseSettlementCreateManyExpenseInputEnvelope = {
   data: Prisma.ExpenseSettlementCreateManyExpenseInput | Prisma.ExpenseSettlementCreateManyExpenseInput[]
+  skipDuplicates?: boolean
 }
 
 export type ExpenseSettlementUpsertWithWhereUniqueWithoutExpenseInput = {
@@ -1245,6 +1246,7 @@ export type ExpenseSettlementCreateManyArgs<ExtArgs extends runtime.Types.Extens
    * The data used to create many ExpenseSettlements.
    */
   data: Prisma.ExpenseSettlementCreateManyInput | Prisma.ExpenseSettlementCreateManyInput[]
+  skipDuplicates?: boolean
 }
 
 /**
@@ -1263,6 +1265,7 @@ export type ExpenseSettlementCreateManyAndReturnArgs<ExtArgs extends runtime.Typ
    * The data used to create many ExpenseSettlements.
    */
   data: Prisma.ExpenseSettlementCreateManyInput | Prisma.ExpenseSettlementCreateManyInput[]
+  skipDuplicates?: boolean
   /**
    * Choose, which related nodes to fetch as well
    */

@@ -1,0 +1,890 @@
+0 verbose cli C:\Program Files\nodejs\node.exe C:\Program Files\nodejs\node_modules\npm\bin\npm-cli.js
+1 info using npm@11.11.0
+2 info using node@v24.14.1
+3 silly config load:file:C:\Program Files\nodejs\node_modules\npm\npmrc
+4 silly config load:file:D:\SITES\2acontrole\.npmrc
+5 silly config load:file:C:\Users\andre\.npmrc
+6 silly config load:file:C:\Users\andre\AppData\Roaming\npm\etc\npmrc
+7 verbose title npm install @prisma/adapter-pg pg
+8 verbose argv "install" "@prisma/adapter-pg" "pg"
+9 verbose logfile logs-max:10 dir:D:\SITES\2acontrole\.npm-cache\_logs\2026-04-10T19_24_57_427Z-
+10 verbose logfile D:\SITES\2acontrole\.npm-cache\_logs\2026-04-10T19_24_57_427Z-debug-0.log
+11 silly logfile done cleaning log files
+12 silly packumentCache heap:2348810240 maxSize:587202560 maxEntrySize:293601280
+13 silly idealTree buildDeps
+14 silly fetch manifest @prisma/adapter-pg@*
+15 silly packumentCache full:https://registry.npmjs.org/@prisma%2fadapter-pg cache-miss
+16 verbose shrinkwrap failed to load node_modules/.package-lock.json missing from lockfile: node_modules/base64-js
+17 http fetch GET 200 https://registry.npmjs.org/@prisma%2fadapter-pg 3374ms (cache miss)
+18 silly packumentCache full:https://registry.npmjs.org/@prisma%2fadapter-pg set size:undefined disposed:false
+19 silly fetch manifest pg@*
+20 silly packumentCache full:https://registry.npmjs.org/pg cache-miss
+21 http fetch GET 200 https://registry.npmjs.org/pg 55ms (cache miss)
+22 silly packumentCache full:https://registry.npmjs.org/pg set size:undefined disposed:false
+23 silly fetch manifest pg-native@>=3.0.1
+24 silly packumentCache full:https://registry.npmjs.org/pg-native cache-miss
+25 http fetch GET 200 https://registry.npmjs.org/pg-native 53ms (cache miss)
+26 silly packumentCache full:https://registry.npmjs.org/pg-native set size:undefined disposed:false
+27 silly placeDep ROOT @prisma/adapter-pg@7.7.0 OK for: controle-app@0.1.0 want: *
+28 silly placeDep ROOT pg@8.20.0 OK for: controle-app@0.1.0 want: *
+29 silly fetch manifest pg@^8.16.3
+30 silly packumentCache full:https://registry.npmjs.org/pg cache-miss
+31 silly fetch manifest @types/pg@^8.16.0
+32 silly packumentCache full:https://registry.npmjs.org/@types%2fpg cache-miss
+33 silly fetch manifest postgres-array@3.0.4
+34 silly packumentCache full:https://registry.npmjs.org/postgres-array cache-miss
+35 silly fetch manifest @prisma/driver-adapter-utils@7.7.0
+36 silly packumentCache full:https://registry.npmjs.org/@prisma%2fdriver-adapter-utils cache-miss
+37 silly fetch manifest pg-connection-string@^2.12.0
+38 silly packumentCache full:https://registry.npmjs.org/pg-connection-string cache-miss
+39 silly fetch manifest pg-pool@^3.13.0
+40 silly packumentCache full:https://registry.npmjs.org/pg-pool cache-miss
+41 silly fetch manifest pg-protocol@^1.13.0
+42 silly packumentCache full:https://registry.npmjs.org/pg-protocol cache-miss
+43 http cache https://registry.npmjs.org/pg 39ms (cache hit)
+44 silly packumentCache full:https://registry.npmjs.org/pg set size:475297 disposed:false
+45 silly fetch manifest pg-types@2.2.0
+46 silly packumentCache full:https://registry.npmjs.org/pg-types cache-miss
+47 http fetch GET 200 https://registry.npmjs.org/@types%2fpg 73ms (cache miss)
+48 silly packumentCache full:https://registry.npmjs.org/@types%2fpg set size:undefined disposed:false
+49 silly fetch manifest pgpass@1.0.5
+50 silly packumentCache full:https://registry.npmjs.org/pgpass cache-miss
+51 http fetch GET 200 https://registry.npmjs.org/postgres-array 141ms (cache miss)
+52 silly packumentCache full:https://registry.npmjs.org/postgres-array set size:undefined disposed:false
+53 silly fetch manifest pg-cloudflare@^1.3.0
+54 silly packumentCache full:https://registry.npmjs.org/pg-cloudflare cache-miss
+55 http fetch GET 200 https://registry.npmjs.org/pg-pool 768ms (cache miss)
+56 silly packumentCache full:https://registry.npmjs.org/pg-pool set size:undefined disposed:false
+57 http fetch GET 200 https://registry.npmjs.org/pgpass 699ms (cache miss)
+58 silly packumentCache full:https://registry.npmjs.org/pgpass set size:undefined disposed:false
+59 http fetch GET 200 https://registry.npmjs.org/pg-connection-string 773ms (cache miss)
+60 silly packumentCache full:https://registry.npmjs.org/pg-connection-string set size:undefined disposed:false
+61 http fetch GET 200 https://registry.npmjs.org/pg-cloudflare 1244ms (cache miss)
+62 silly packumentCache full:https://registry.npmjs.org/pg-cloudflare set size:undefined disposed:false
+63 http fetch GET 200 https://registry.npmjs.org/pg-protocol 1404ms (cache miss)
+64 silly packumentCache full:https://registry.npmjs.org/pg-protocol set size:undefined disposed:false
+65 http fetch GET 200 https://registry.npmjs.org/@prisma%2fdriver-adapter-utils 1564ms (cache revalidated)
+66 silly packumentCache full:https://registry.npmjs.org/@prisma%2fdriver-adapter-utils set size:9574374 disposed:false
+67 http fetch GET 200 https://registry.npmjs.org/pg-types 1567ms (cache miss)
+68 silly packumentCache full:https://registry.npmjs.org/pg-types set size:undefined disposed:false
+69 silly placeDep ROOT @prisma/driver-adapter-utils@7.7.0 OK for: @prisma/adapter-pg@7.7.0 want: 7.7.0
+70 silly placeDep ROOT @types/pg@8.20.0 OK for: @prisma/adapter-pg@7.7.0 want: ^8.16.0
+71 silly placeDep ROOT postgres-array@3.0.4 OK for: @prisma/adapter-pg@7.7.0 want: 3.0.4
+72 silly fetch manifest pg-types@^2.2.0
+73 silly packumentCache full:https://registry.npmjs.org/pg-types cache-miss
+74 silly fetch manifest pg-protocol@*
+75 silly packumentCache full:https://registry.npmjs.org/pg-protocol cache-miss
+76 http cache https://registry.npmjs.org/pg-types 43ms (cache hit)
+77 silly packumentCache full:https://registry.npmjs.org/pg-types set size:51397 disposed:false
+78 http cache https://registry.npmjs.org/pg-protocol 44ms (cache hit)
+79 silly packumentCache full:https://registry.npmjs.org/pg-protocol set size:51532 disposed:false
+80 silly placeDep ROOT pg-protocol@1.13.0 OK for: @types/pg@8.20.0 want: *
+81 silly placeDep ROOT pg-types@2.2.0 OK for: @types/pg@8.20.0 want: ^2.2.0
+82 silly fetch manifest pg-int8@1.0.1
+83 silly packumentCache full:https://registry.npmjs.org/pg-int8 cache-miss
+84 silly fetch manifest postgres-date@~1.0.4
+85 silly packumentCache full:https://registry.npmjs.org/postgres-date cache-miss
+86 silly fetch manifest postgres-array@~2.0.0
+87 silly packumentCache full:https://registry.npmjs.org/postgres-array cache-miss
+88 silly fetch manifest postgres-bytea@~1.0.0
+89 silly packumentCache full:https://registry.npmjs.org/postgres-bytea cache-miss
+90 silly fetch manifest postgres-interval@^1.1.0
+91 silly packumentCache full:https://registry.npmjs.org/postgres-interval cache-miss
+92 http cache https://registry.npmjs.org/postgres-array 18ms (cache hit)
+93 silly packumentCache full:https://registry.npmjs.org/postgres-array set size:21967 disposed:false
+94 http fetch GET 200 https://registry.npmjs.org/pg-int8 326ms (cache miss)
+95 silly packumentCache full:https://registry.npmjs.org/pg-int8 set size:undefined disposed:false
+96 http fetch GET 200 https://registry.npmjs.org/postgres-bytea 357ms (cache miss)
+97 silly packumentCache full:https://registry.npmjs.org/postgres-bytea set size:undefined disposed:false
+98 http fetch GET 200 https://registry.npmjs.org/postgres-interval 362ms (cache miss)
+99 silly packumentCache full:https://registry.npmjs.org/postgres-interval set size:undefined disposed:false
+100 http fetch GET 200 https://registry.npmjs.org/postgres-date 401ms (cache miss)
+101 silly packumentCache full:https://registry.npmjs.org/postgres-date set size:undefined disposed:false
+102 silly fetch manifest pg@>=8.0
+103 silly packumentCache full:https://registry.npmjs.org/pg cache-hit
+104 silly placeDep ROOT pg-cloudflare@1.3.0 OK for: pg@8.20.0 want: ^1.3.0
+105 silly placeDep ROOT pg-connection-string@2.12.0 OK for: pg@8.20.0 want: ^2.12.0
+106 silly placeDep ROOT pg-pool@3.13.0 OK for: pg@8.20.0 want: ^3.13.0
+107 silly placeDep ROOT pgpass@1.0.5 OK for: pg@8.20.0 want: 1.0.5
+108 silly fetch manifest split2@^4.1.0
+109 silly packumentCache full:https://registry.npmjs.org/split2 cache-miss
+110 http fetch GET 200 https://registry.npmjs.org/split2 79ms (cache miss)
+111 silly packumentCache full:https://registry.npmjs.org/split2 set size:undefined disposed:false
+112 silly placeDep ROOT pg-int8@1.0.1 OK for: pg-types@2.2.0 want: 1.0.1
+113 silly placeDep node_modules/pg-types postgres-array@2.0.0 OK for: pg-types@2.2.0 want: ~2.0.0
+114 silly placeDep ROOT postgres-bytea@1.0.1 OK for: pg-types@2.2.0 want: ~1.0.0
+115 silly placeDep ROOT postgres-date@1.0.7 OK for: pg-types@2.2.0 want: ~1.0.4
+116 silly placeDep ROOT postgres-interval@1.2.0 OK for: pg-types@2.2.0 want: ^1.1.0
+117 silly fetch manifest xtend@^4.0.0
+118 silly packumentCache full:https://registry.npmjs.org/xtend cache-miss
+119 http fetch GET 200 https://registry.npmjs.org/xtend 156ms (cache miss)
+120 silly packumentCache full:https://registry.npmjs.org/xtend set size:undefined disposed:false
+121 silly placeDep ROOT split2@4.2.0 OK for: pgpass@1.0.5 want: ^4.1.0
+122 silly placeDep ROOT xtend@4.0.2 OK for: postgres-interval@1.2.0 want: ^4.0.0
+123 silly reify mark retired [ 'D:\\SITES\\2acontrole\\node_modules\\better-sqlite3' ]
+124 silly reify mark retired [ 'D:\\SITES\\2acontrole\\node_modules\\bindings' ]
+125 silly reify mark retired [ 'D:\\SITES\\2acontrole\\node_modules\\bl' ]
+126 silly reify mark retired [ 'D:\\SITES\\2acontrole\\node_modules\\buffer' ]
+127 silly reify mark retired [ 'D:\\SITES\\2acontrole\\node_modules\\chownr' ]
+128 silly reify mark retired [ 'D:\\SITES\\2acontrole\\node_modules\\base64-js' ]
+129 silly reify mark retired [ 'D:\\SITES\\2acontrole\\node_modules\\deep-extend' ]
+130 silly reify mark retired [ 'D:\\SITES\\2acontrole\\node_modules\\decompress-response' ]
+131 silly reify mark retired [ 'D:\\SITES\\2acontrole\\node_modules\\expand-template' ]
+132 silly reify mark retired [ 'D:\\SITES\\2acontrole\\node_modules\\fs-constants' ]
+133 silly reify mark retired [ 'D:\\SITES\\2acontrole\\node_modules\\end-of-stream' ]
+134 silly reify mark retired [ 'D:\\SITES\\2acontrole\\node_modules\\inherits' ]
+135 silly reify mark retired [ 'D:\\SITES\\2acontrole\\node_modules\\ieee754' ]
+136 silly reify mark retired [ 'D:\\SITES\\2acontrole\\node_modules\\ini' ]
+137 silly reify mark retired [ 'D:\\SITES\\2acontrole\\node_modules\\mimic-response' ]
+138 silly reify mark retired [ 'D:\\SITES\\2acontrole\\node_modules\\mkdirp-classic' ]
+139 silly reify mark retired [ 'D:\\SITES\\2acontrole\\node_modules\\node-abi' ]
+140 silly reify mark retired [ 'D:\\SITES\\2acontrole\\node_modules\\napi-build-utils' ]
+141 silly reify mark retired [ 'D:\\SITES\\2acontrole\\node_modules\\once' ]
+142 silly reify mark retired [ 'D:\\SITES\\2acontrole\\node_modules\\github-from-package' ]
+143 silly reify mark retired [
+143 silly reify   'D:\\SITES\\2acontrole\\node_modules\\prebuild-install',
+143 silly reify   'D:\\SITES\\2acontrole\\node_modules\\.bin\\prebuild-install',
+143 silly reify   'D:\\SITES\\2acontrole\\node_modules\\.bin\\prebuild-install.cmd',
+143 silly reify   'D:\\SITES\\2acontrole\\node_modules\\.bin\\prebuild-install.ps1'
+143 silly reify ]
+144 silly reify mark retired [ 'D:\\SITES\\2acontrole\\node_modules\\file-uri-to-path' ]
+145 silly reify mark retired [ 'D:\\SITES\\2acontrole\\node_modules\\pump' ]
+146 silly reify mark retired [ 'D:\\SITES\\2acontrole\\node_modules\\safe-buffer' ]
+147 silly reify mark retired [ 'D:\\SITES\\2acontrole\\node_modules\\simple-get' ]
+148 silly reify mark retired [ 'D:\\SITES\\2acontrole\\node_modules\\simple-concat' ]
+149 silly reify mark retired [ 'D:\\SITES\\2acontrole\\node_modules\\string_decoder' ]
+150 silly reify mark retired [ 'D:\\SITES\\2acontrole\\node_modules\\tunnel-agent' ]
+151 silly reify mark retired [ 'D:\\SITES\\2acontrole\\node_modules\\util-deprecate' ]
+152 silly reify mark retired [ 'D:\\SITES\\2acontrole\\node_modules\\wrappy' ]
+153 silly reify mark retired [ 'D:\\SITES\\2acontrole\\node_modules\\@emnapi\\core' ]
+154 silly reify mark retired [ 'D:\\SITES\\2acontrole\\node_modules\\@emnapi\\wasi-threads' ]
+155 silly reify mark retired [ 'D:\\SITES\\2acontrole\\node_modules\\tar-fs' ]
+156 silly reify mark retired [ 'D:\\SITES\\2acontrole\\node_modules\\readable-stream' ]
+157 silly reify mark retired [
+157 silly reify   'D:\\SITES\\2acontrole\\node_modules\\@prisma\\adapter-better-sqlite3'
+157 silly reify ]
+158 silly reify mark retired [
+158 silly reify   'D:\\SITES\\2acontrole\\node_modules\\@prisma\\driver-adapter-utils'
+158 silly reify ]
+159 silly reify mark retired [ 'D:\\SITES\\2acontrole\\node_modules\\@napi-rs\\wasm-runtime' ]
+160 silly reify mark retired [
+160 silly reify   'D:\\SITES\\2acontrole\\node_modules\\rc',
+160 silly reify   'D:\\SITES\\2acontrole\\node_modules\\.bin\\rc',
+160 silly reify   'D:\\SITES\\2acontrole\\node_modules\\.bin\\rc.cmd',
+160 silly reify   'D:\\SITES\\2acontrole\\node_modules\\.bin\\rc.ps1'
+160 silly reify ]
+161 silly reify mark retired [ 'D:\\SITES\\2acontrole\\node_modules\\tar-stream' ]
+162 silly reify mark retired [ 'D:\\SITES\\2acontrole\\node_modules\\@tybys\\wasm-util' ]
+163 silly reify moves {
+163 silly reify   'D:\\SITES\\2acontrole\\node_modules\\better-sqlite3': 'D:\\SITES\\2acontrole\\node_modules\\.better-sqlite3-vxT7drIb',
+163 silly reify   'D:\\SITES\\2acontrole\\node_modules\\bindings': 'D:\\SITES\\2acontrole\\node_modules\\.bindings-IWRJsmhq',
+163 silly reify   'D:\\SITES\\2acontrole\\node_modules\\bl': 'D:\\SITES\\2acontrole\\node_modules\\.bl-bIjkl7vm',
+163 silly reify   'D:\\SITES\\2acontrole\\node_modules\\buffer': 'D:\\SITES\\2acontrole\\node_modules\\.buffer-qpW5jOPc',
+163 silly reify   'D:\\SITES\\2acontrole\\node_modules\\chownr': 'D:\\SITES\\2acontrole\\node_modules\\.chownr-tVWHOiQn',
+163 silly reify   'D:\\SITES\\2acontrole\\node_modules\\base64-js': 'D:\\SITES\\2acontrole\\node_modules\\.base64-js-JlaZIQPP',
+163 silly reify   'D:\\SITES\\2acontrole\\node_modules\\deep-extend': 'D:\\SITES\\2acontrole\\node_modules\\.deep-extend-4ioe2dw9',
+163 silly reify   'D:\\SITES\\2acontrole\\node_modules\\decompress-response': 'D:\\SITES\\2acontrole\\node_modules\\.decompress-response-QUiW48y7',
+163 silly reify   'D:\\SITES\\2acontrole\\node_modules\\expand-template': 'D:\\SITES\\2acontrole\\node_modules\\.expand-template-O110upI2',
+163 silly reify   'D:\\SITES\\2acontrole\\node_modules\\fs-constants': 'D:\\SITES\\2acontrole\\node_modules\\.fs-constants-rdvCcUtE',
+163 silly reify   'D:\\SITES\\2acontrole\\node_modules\\end-of-stream': 'D:\\SITES\\2acontrole\\node_modules\\.end-of-stream-cuePh4Mp',
+163 silly reify   'D:\\SITES\\2acontrole\\node_modules\\inherits': 'D:\\SITES\\2acontrole\\node_modules\\.inherits-4AzHc4WZ',
+163 silly reify   'D:\\SITES\\2acontrole\\node_modules\\ieee754': 'D:\\SITES\\2acontrole\\node_modules\\.ieee754-0GHaYjfo',
+163 silly reify   'D:\\SITES\\2acontrole\\node_modules\\ini': 'D:\\SITES\\2acontrole\\node_modules\\.ini-FQfqMUsE',
+163 silly reify   'D:\\SITES\\2acontrole\\node_modules\\mimic-response': 'D:\\SITES\\2acontrole\\node_modules\\.mimic-response-Glozptem',
+163 silly reify   'D:\\SITES\\2acontrole\\node_modules\\mkdirp-classic': 'D:\\SITES\\2acontrole\\node_modules\\.mkdirp-classic-TIMe0ffs',
+163 silly reify   'D:\\SITES\\2acontrole\\node_modules\\node-abi': 'D:\\SITES\\2acontrole\\node_modules\\.node-abi-Wi9jkIEb',
+163 silly reify   'D:\\SITES\\2acontrole\\node_modules\\napi-build-utils': 'D:\\SITES\\2acontrole\\node_modules\\.napi-build-utils-lU3JxqsP',
+163 silly reify   'D:\\SITES\\2acontrole\\node_modules\\once': 'D:\\SITES\\2acontrole\\node_modules\\.once-elFeFv5w',
+163 silly reify   'D:\\SITES\\2acontrole\\node_modules\\github-from-package': 'D:\\SITES\\2acontrole\\node_modules\\.github-from-package-41zS2qTh',
+163 silly reify   'D:\\SITES\\2acontrole\\node_modules\\prebuild-install': 'D:\\SITES\\2acontrole\\node_modules\\.prebuild-install-LFGdYgaT',
+163 silly reify   'D:\\SITES\\2acontrole\\node_modules\\.bin\\prebuild-install': 'D:\\SITES\\2acontrole\\node_modules\\.bin\\.prebuild-install-f2UR62mW',
+163 silly reify   'D:\\SITES\\2acontrole\\node_modules\\.bin\\prebuild-install.cmd': 'D:\\SITES\\2acontrole\\node_modules\\.bin\\.prebuild-install.cmd-PgoELnLu',
+163 silly reify   'D:\\SITES\\2acontrole\\node_modules\\.bin\\prebuild-install.ps1': 'D:\\SITES\\2acontrole\\node_modules\\.bin\\.prebuild-install.ps1-NFijQ26p',
+163 silly reify   'D:\\SITES\\2acontrole\\node_modules\\file-uri-to-path': 'D:\\SITES\\2acontrole\\node_modules\\.file-uri-to-path-5n2O02Bw',
+163 silly reify   'D:\\SITES\\2acontrole\\node_modules\\pump': 'D:\\SITES\\2acontrole\\node_modules\\.pump-j7jw4FPn',
+163 silly reify   'D:\\SITES\\2acontrole\\node_modules\\safe-buffer': 'D:\\SITES\\2acontrole\\node_modules\\.safe-buffer-yi1LB5us',
+163 silly reify   'D:\\SITES\\2acontrole\\node_modules\\simple-get': 'D:\\SITES\\2acontrole\\node_modules\\.simple-get-oO2JKVfb',
+163 silly reify   'D:\\SITES\\2acontrole\\node_modules\\simple-concat': 'D:\\SITES\\2acontrole\\node_modules\\.simple-concat-8ZCUAE3n',
+163 silly reify   'D:\\SITES\\2acontrole\\node_modules\\string_decoder': 'D:\\SITES\\2acontrole\\node_modules\\.string_decoder-KYWhGTML',
+163 silly reify   'D:\\SITES\\2acontrole\\node_modules\\tunnel-agent': 'D:\\SITES\\2acontrole\\node_modules\\.tunnel-agent-TaifbhKW',
+163 silly reify   'D:\\SITES\\2acontrole\\node_modules\\util-deprecate': 'D:\\SITES\\2acontrole\\node_modules\\.util-deprecate-46C4Dg7B',
+163 silly reify   'D:\\SITES\\2acontrole\\node_modules\\wrappy': 'D:\\SITES\\2acontrole\\node_modules\\.wrappy-NmfaO4oI',
+163 silly reify   'D:\\SITES\\2acontrole\\node_modules\\@emnapi\\core': 'D:\\SITES\\2acontrole\\node_modules\\@emnapi\\.core-xTXUIZId',
+163 silly reify   'D:\\SITES\\2acontrole\\node_modules\\@emnapi\\wasi-threads': 'D:\\SITES\\2acontrole\\node_modules\\@emnapi\\.wasi-threads-1jAIQSrS',
+163 silly reify   'D:\\SITES\\2acontrole\\node_modules\\tar-fs': 'D:\\SITES\\2acontrole\\node_modules\\.tar-fs-F9XMKw6r',
+163 silly reify   'D:\\SITES\\2acontrole\\node_modules\\readable-stream': 'D:\\SITES\\2acontrole\\node_modules\\.readable-stream-nFpTyGWd',
+163 silly reify   'D:\\SITES\\2acontrole\\node_modules\\@prisma\\adapter-better-sqlite3': 'D:\\SITES\\2acontrole\\node_modules\\@prisma\\.adapter-better-sqlite3-FtreoKlL',
+163 silly reify   'D:\\SITES\\2acontrole\\node_modules\\@prisma\\driver-adapter-utils': 'D:\\SITES\\2acontrole\\node_modules\\@prisma\\.driver-adapter-utils-FJOoefgv',
+163 silly reify   'D:\\SITES\\2acontrole\\node_modules\\@napi-rs\\wasm-runtime': 'D:\\SITES\\2acontrole\\node_modules\\@napi-rs\\.wasm-runtime-zWQddrU6',
+163 silly reify   'D:\\SITES\\2acontrole\\node_modules\\rc': 'D:\\SITES\\2acontrole\\node_modules\\.rc-H9NSP6kP',
+163 silly reify   'D:\\SITES\\2acontrole\\node_modules\\.bin\\rc': 'D:\\SITES\\2acontrole\\node_modules\\.bin\\.rc-Npjr8NyT',
+163 silly reify   'D:\\SITES\\2acontrole\\node_modules\\.bin\\rc.cmd': 'D:\\SITES\\2acontrole\\node_modules\\.bin\\.rc.cmd-EqjGCmpR',
+163 silly reify   'D:\\SITES\\2acontrole\\node_modules\\.bin\\rc.ps1': 'D:\\SITES\\2acontrole\\node_modules\\.bin\\.rc.ps1-6bL9XeT9',
+163 silly reify   'D:\\SITES\\2acontrole\\node_modules\\tar-stream': 'D:\\SITES\\2acontrole\\node_modules\\.tar-stream-r7PdLZDc',
+163 silly reify   'D:\\SITES\\2acontrole\\node_modules\\@tybys\\wasm-util': 'D:\\SITES\\2acontrole\\node_modules\\@tybys\\.wasm-util-tyegB66B'
+163 silly reify }
+164 silly audit bulk request {
+164 silly audit   '@alloc/quick-lru': [ '5.2.0' ],
+164 silly audit   '@babel/code-frame': [ '7.29.0' ],
+164 silly audit   '@babel/compat-data': [ '7.29.0' ],
+164 silly audit   '@babel/core': [ '7.29.0' ],
+164 silly audit   '@babel/generator': [ '7.29.1' ],
+164 silly audit   '@babel/helper-compilation-targets': [ '7.28.6' ],
+164 silly audit   '@babel/helper-globals': [ '7.28.0' ],
+164 silly audit   '@babel/helper-module-imports': [ '7.28.6' ],
+164 silly audit   '@babel/helper-module-transforms': [ '7.28.6' ],
+164 silly audit   '@babel/helper-string-parser': [ '7.27.1' ],
+164 silly audit   '@babel/helper-validator-identifier': [ '7.28.5' ],
+164 silly audit   '@babel/helper-validator-option': [ '7.27.1' ],
+164 silly audit   '@babel/helpers': [ '7.29.2' ],
+164 silly audit   '@babel/parser': [ '7.29.2' ],
+164 silly audit   '@babel/template': [ '7.28.6' ],
+164 silly audit   '@babel/traverse': [ '7.29.0' ],
+164 silly audit   '@babel/types': [ '7.29.0' ],
+164 silly audit   '@electric-sql/pglite': [ '0.4.1' ],
+164 silly audit   '@electric-sql/pglite-socket': [ '0.1.1' ],
+164 silly audit   '@electric-sql/pglite-tools': [ '0.3.1' ],
+164 silly audit   '@emnapi/core': [ '1.9.2', '1.8.1' ],
+164 silly audit   '@emnapi/runtime': [ '1.9.2', '1.8.1' ],
+164 silly audit   '@emnapi/wasi-threads': [ '1.2.1', '1.1.0' ],
+164 silly audit   '@eslint-community/eslint-utils': [ '4.9.1' ],
+164 silly audit   'eslint-visitor-keys': [ '3.4.3', '5.0.1', '4.2.1' ],
+164 silly audit   '@eslint-community/regexpp': [ '4.12.2' ],
+164 silly audit   '@eslint/config-array': [ '0.21.2' ],
+164 silly audit   '@eslint/config-helpers': [ '0.4.2' ],
+164 silly audit   '@eslint/core': [ '0.17.0' ],
+164 silly audit   '@eslint/eslintrc': [ '3.3.5' ],
+164 silly audit   '@eslint/js': [ '9.39.4' ],
+164 silly audit   '@eslint/object-schema': [ '2.1.7' ],
+164 silly audit   '@eslint/plugin-kit': [ '0.4.1' ],
+164 silly audit   '@hono/node-server': [ '1.19.11' ],
+164 silly audit   '@humanfs/core': [ '0.19.1' ],
+164 silly audit   '@humanfs/node': [ '0.16.7' ],
+164 silly audit   '@humanwhocodes/module-importer': [ '1.0.1' ],
+164 silly audit   '@humanwhocodes/retry': [ '0.4.3' ],
+164 silly audit   '@img/colour': [ '1.1.0' ],
+164 silly audit   '@img/sharp-darwin-arm64': [ '0.34.5' ],
+164 silly audit   '@img/sharp-darwin-x64': [ '0.34.5' ],
+164 silly audit   '@img/sharp-libvips-darwin-arm64': [ '1.2.4' ],
+164 silly audit   '@img/sharp-libvips-darwin-x64': [ '1.2.4' ],
+164 silly audit   '@img/sharp-libvips-linux-arm': [ '1.2.4' ],
+164 silly audit   '@img/sharp-libvips-linux-arm64': [ '1.2.4' ],
+164 silly audit   '@img/sharp-libvips-linux-ppc64': [ '1.2.4' ],
+164 silly audit   '@img/sharp-libvips-linux-riscv64': [ '1.2.4' ],
+164 silly audit   '@img/sharp-libvips-linux-s390x': [ '1.2.4' ],
+164 silly audit   '@img/sharp-libvips-linux-x64': [ '1.2.4' ],
+164 silly audit   '@img/sharp-libvips-linuxmusl-arm64': [ '1.2.4' ],
+164 silly audit   '@img/sharp-libvips-linuxmusl-x64': [ '1.2.4' ],
+164 silly audit   '@img/sharp-linux-arm': [ '0.34.5' ],
+164 silly audit   '@img/sharp-linux-arm64': [ '0.34.5' ],
+164 silly audit   '@img/sharp-linux-ppc64': [ '0.34.5' ],
+164 silly audit   '@img/sharp-linux-riscv64': [ '0.34.5' ],
+164 silly audit   '@img/sharp-linux-s390x': [ '0.34.5' ],
+164 silly audit   '@img/sharp-linux-x64': [ '0.34.5' ],
+164 silly audit   '@img/sharp-linuxmusl-arm64': [ '0.34.5' ],
+164 silly audit   '@img/sharp-linuxmusl-x64': [ '0.34.5' ],
+164 silly audit   '@img/sharp-wasm32': [ '0.34.5' ],
+164 silly audit   '@img/sharp-win32-arm64': [ '0.34.5' ],
+164 silly audit   '@img/sharp-win32-ia32': [ '0.34.5' ],
+164 silly audit   '@img/sharp-win32-x64': [ '0.34.5' ],
+164 silly audit   '@jridgewell/gen-mapping': [ '0.3.13' ],
+164 silly audit   '@jridgewell/remapping': [ '2.3.5' ],
+164 silly audit   '@jridgewell/resolve-uri': [ '3.1.2' ],
+164 silly audit   '@jridgewell/sourcemap-codec': [ '1.5.5' ],
+164 silly audit   '@jridgewell/trace-mapping': [ '0.3.31' ],
+164 silly audit   '@kurkle/color': [ '0.3.4' ],
+164 silly audit   '@napi-rs/wasm-runtime': [ '0.2.12', '1.1.1' ],
+164 silly audit   '@next/env': [ '16.2.3' ],
+164 silly audit   '@next/eslint-plugin-next': [ '16.2.3' ],
+164 silly audit   '@next/swc-darwin-arm64': [ '16.2.3' ],
+164 silly audit   '@next/swc-darwin-x64': [ '16.2.3' ],
+164 silly audit   '@next/swc-linux-arm64-gnu': [ '16.2.3' ],
+164 silly audit   '@next/swc-linux-arm64-musl': [ '16.2.3' ],
+164 silly audit   '@next/swc-linux-x64-gnu': [ '16.2.3' ],
+164 silly audit   '@next/swc-linux-x64-musl': [ '16.2.3' ],
+164 silly audit   '@next/swc-win32-arm64-msvc': [ '16.2.3' ],
+164 silly audit   '@next/swc-win32-x64-msvc': [ '16.2.3' ],
+164 silly audit   '@nodelib/fs.scandir': [ '2.1.5' ],
+164 silly audit   '@nodelib/fs.stat': [ '2.0.5' ],
+164 silly audit   '@nodelib/fs.walk': [ '1.2.8' ],
+164 silly audit   '@nolyfill/is-core-module': [ '1.0.39' ],
+164 silly audit   '@prisma/client': [ '7.7.0' ],
+164 silly audit   '@prisma/client-runtime-utils': [ '7.7.0' ],
+164 silly audit   '@prisma/config': [ '7.7.0' ],
+164 silly audit   '@prisma/debug': [ '7.7.0', '7.2.0' ],
+164 silly audit   '@prisma/dev': [ '0.24.3' ],
+164 silly audit   '@prisma/engines': [ '7.7.0' ],
+164 silly audit   '@prisma/engines-version': [ '7.6.0-1.75cbdc1eb7150937890ad5465d861175c6624711' ],
+164 silly audit   '@prisma/get-platform': [ '7.7.0', '7.2.0' ],
+164 silly audit   '@prisma/fetch-engine': [ '7.7.0' ],
+164 silly audit   '@prisma/query-plan-executor': [ '7.2.0' ],
+164 silly audit   '@prisma/streams-local': [ '0.1.2' ],
+164 silly audit   ajv: [ '8.18.0', '6.14.0' ],
+164 silly audit   'json-schema-traverse': [ '1.0.0', '0.4.1' ],
+164 silly audit   '@prisma/studio-core': [ '0.27.3' ],
+164 silly audit   '@radix-ui/primitive': [ '1.1.3' ],
+164 silly audit   '@radix-ui/react-compose-refs': [ '1.1.2' ],
+164 silly audit   '@radix-ui/react-primitive': [ '2.1.3' ],
+164 silly audit   '@radix-ui/react-slot': [ '1.2.3' ],
+164 silly audit   '@radix-ui/react-toggle': [ '1.1.10' ],
+164 silly audit   '@radix-ui/react-use-controllable-state': [ '1.2.2' ],
+164 silly audit   '@radix-ui/react-use-effect-event': [ '0.0.2' ],
+164 silly audit   '@radix-ui/react-use-layout-effect': [ '1.1.1' ],
+164 silly audit   '@rtsao/scc': [ '1.1.0' ],
+164 silly audit   '@standard-schema/spec': [ '1.1.0' ],
+164 silly audit   '@swc/helpers': [ '0.5.15' ],
+164 silly audit   '@tailwindcss/node': [ '4.2.2' ],
+164 silly audit   '@tailwindcss/oxide': [ '4.2.2' ],
+164 silly audit   '@tailwindcss/oxide-android-arm64': [ '4.2.2' ],
+164 silly audit   '@tailwindcss/oxide-darwin-arm64': [ '4.2.2' ],
+164 silly audit   '@tailwindcss/oxide-darwin-x64': [ '4.2.2' ],
+164 silly audit   '@tailwindcss/oxide-freebsd-x64': [ '4.2.2' ],
+164 silly audit   '@tailwindcss/oxide-linux-arm-gnueabihf': [ '4.2.2' ],
+164 silly audit   '@tailwindcss/oxide-linux-arm64-gnu': [ '4.2.2' ],
+164 silly audit   '@tailwindcss/oxide-linux-arm64-musl': [ '4.2.2' ],
+164 silly audit   '@tailwindcss/oxide-linux-x64-gnu': [ '4.2.2' ],
+164 silly audit   '@tailwindcss/oxide-linux-x64-musl': [ '4.2.2' ],
+164 silly audit   '@tailwindcss/oxide-wasm32-wasi': [ '4.2.2' ],
+164 silly audit   '@tybys/wasm-util': [ '0.10.1' ],
+164 silly audit   tslib: [ '2.8.1' ],
+164 silly audit   '@tailwindcss/oxide-win32-arm64-msvc': [ '4.2.2' ],
+164 silly audit   '@tailwindcss/oxide-win32-x64-msvc': [ '4.2.2' ],
+164 silly audit   '@tailwindcss/postcss': [ '4.2.2' ],
+164 silly audit   '@types/estree': [ '1.0.8' ],
+164 silly audit   '@types/json-schema': [ '7.0.15' ],
+164 silly audit   '@types/json5': [ '0.0.29' ],
+164 silly audit   '@types/node': [ '20.19.39' ],
+164 silly audit   '@types/react': [ '19.2.14' ],
+164 silly audit   '@types/react-dom': [ '19.2.3' ],
+164 silly audit   '@typescript-eslint/eslint-plugin': [ '8.58.1' ],
+164 silly audit   ignore: [ '7.0.5', '5.3.2' ],
+164 silly audit   '@typescript-eslint/parser': [ '8.58.1' ],
+164 silly audit   '@typescript-eslint/project-service': [ '8.58.1' ],
+164 silly audit   '@typescript-eslint/scope-manager': [ '8.58.1' ],
+164 silly audit   '@typescript-eslint/tsconfig-utils': [ '8.58.1' ],
+164 silly audit   '@typescript-eslint/type-utils': [ '8.58.1' ],
+164 silly audit   '@typescript-eslint/types': [ '8.58.1' ],
+164 silly audit   '@typescript-eslint/typescript-estree': [ '8.58.1' ],
+164 silly audit   'balanced-match': [ '4.0.4', '1.0.2' ],
+164 silly audit   'brace-expansion': [ '5.0.5', '1.1.13' ],
+164 silly audit   minimatch: [ '10.2.5', '3.1.5' ],
+164 silly audit   semver: [ '7.7.4', '6.3.1' ],
+164 silly audit   '@typescript-eslint/utils': [ '8.58.1' ],
+164 silly audit   '@typescript-eslint/visitor-keys': [ '8.58.1' ],
+164 silly audit   '@unrs/resolver-binding-android-arm-eabi': [ '1.11.1' ],
+164 silly audit   '@unrs/resolver-binding-android-arm64': [ '1.11.1' ],
+164 silly audit   '@unrs/resolver-binding-darwin-arm64': [ '1.11.1' ],
+164 silly audit   '@unrs/resolver-binding-darwin-x64': [ '1.11.1' ],
+164 silly audit   '@unrs/resolver-binding-freebsd-x64': [ '1.11.1' ],
+164 silly audit   '@unrs/resolver-binding-linux-arm-gnueabihf': [ '1.11.1' ],
+164 silly audit   '@unrs/resolver-binding-linux-arm-musleabihf': [ '1.11.1' ],
+164 silly audit   '@unrs/resolver-binding-linux-arm64-gnu': [ '1.11.1' ],
+164 silly audit   '@unrs/resolver-binding-linux-arm64-musl': [ '1.11.1' ],
+164 silly audit   '@unrs/resolver-binding-linux-ppc64-gnu': [ '1.11.1' ],
+164 silly audit   '@unrs/resolver-binding-linux-riscv64-gnu': [ '1.11.1' ],
+164 silly audit   '@unrs/resolver-binding-linux-riscv64-musl': [ '1.11.1' ],
+164 silly audit   '@unrs/resolver-binding-linux-s390x-gnu': [ '1.11.1' ],
+164 silly audit   '@unrs/resolver-binding-linux-x64-gnu': [ '1.11.1' ],
+164 silly audit   '@unrs/resolver-binding-linux-x64-musl': [ '1.11.1' ],
+164 silly audit   '@unrs/resolver-binding-wasm32-wasi': [ '1.11.1' ],
+164 silly audit   '@unrs/resolver-binding-win32-arm64-msvc': [ '1.11.1' ],
+164 silly audit   '@unrs/resolver-binding-win32-ia32-msvc': [ '1.11.1' ],
+164 silly audit   '@unrs/resolver-binding-win32-x64-msvc': [ '1.11.1' ],
+164 silly audit   acorn: [ '8.16.0' ],
+164 silly audit   'acorn-jsx': [ '5.3.2' ],
+164 silly audit   'ansi-styles': [ '4.3.0' ],
+164 silly audit   argparse: [ '2.0.1' ],
+164 silly audit   'aria-query': [ '5.3.2' ],
+164 silly audit   'array-buffer-byte-length': [ '1.0.2' ],
+164 silly audit   'array-includes': [ '3.1.9' ],
+164 silly audit   'array.prototype.findlast': [ '1.2.5' ],
+164 silly audit   'array.prototype.findlastindex': [ '1.2.6' ],
+164 silly audit   'array.prototype.flat': [ '1.3.3' ],
+164 silly audit   'array.prototype.flatmap': [ '1.3.3' ],
+164 silly audit   'array.prototype.tosorted': [ '1.1.4' ],
+164 silly audit   'arraybuffer.prototype.slice': [ '1.0.4' ],
+164 silly audit   'ast-types-flow': [ '0.0.8' ],
+164 silly audit   'async-function': [ '1.0.0' ],
+164 silly audit   'available-typed-arrays': [ '1.0.7' ],
+164 silly audit   'aws-ssl-profiles': [ '1.1.2' ],
+164 silly audit   'axe-core': [ '4.11.2' ],
+164 silly audit   'axobject-query': [ '4.1.0' ],
+164 silly audit   'baseline-browser-mapping': [ '2.10.17' ],
+164 silly audit   'better-result': [ '2.8.2' ],
+164 silly audit   braces: [ '3.0.3' ],
+164 silly audit   browserslist: [ '4.28.2' ],
+164 silly audit   c12: [ '3.1.0' ],
+164 silly audit   'call-bind': [ '1.0.9' ],
+164 silly audit   'call-bind-apply-helpers': [ '1.0.2' ],
+164 silly audit   'call-bound': [ '1.0.4' ],
+164 silly audit   callsites: [ '3.1.0' ],
+164 silly audit   'caniuse-lite': [ '1.0.30001787' ],
+164 silly audit   chalk: [ '4.1.2' ],
+164 silly audit   'chart.js': [ '4.5.1' ],
+164 silly audit   chokidar: [ '4.0.3' ],
+164 silly audit   citty: [ '0.1.6', '0.2.2' ],
+164 silly audit   'client-only': [ '0.0.1' ],
+164 silly audit   'color-convert': [ '2.0.1' ],
+164 silly audit   'color-name': [ '1.1.4' ],
+164 silly audit   'concat-map': [ '0.0.1' ],
+164 silly audit   confbox: [ '0.2.4' ],
+164 silly audit   consola: [ '3.4.2' ],
+164 silly audit   'convert-source-map': [ '2.0.0' ],
+164 silly audit   'cross-spawn': [ '7.0.6' ],
+164 silly audit   csstype: [ '3.2.3' ],
+164 silly audit   'damerau-levenshtein': [ '1.0.8' ],
+164 silly audit   'data-view-buffer': [ '1.0.2' ],
+164 silly audit   'data-view-byte-length': [ '1.0.2' ],
+164 silly audit   'data-view-byte-offset': [ '1.0.1' ],
+164 silly audit   debug: [ '4.4.3', '3.2.7' ],
+164 silly audit   'deep-is': [ '0.1.4' ],
+164 silly audit   'deepmerge-ts': [ '7.1.5' ],
+164 silly audit   'define-data-property': [ '1.1.4' ],
+164 silly audit   'define-properties': [ '1.2.1' ],
+164 silly audit   defu: [ '6.1.7' ],
+164 silly audit   denque: [ '2.1.0' ],
+164 silly audit   destr: [ '2.0.5' ],
+164 silly audit   'detect-libc': [ '2.1.2' ],
+164 silly audit   doctrine: [ '2.1.0' ],
+164 silly audit   dotenv: [ '16.6.1' ],
+164 silly audit   'dunder-proto': [ '1.0.1' ],
+164 silly audit   effect: [ '3.20.0' ],
+164 silly audit   'electron-to-chromium': [ '1.5.334' ],
+164 silly audit   'emoji-regex': [ '9.2.2' ],
+164 silly audit   empathic: [ '2.0.0' ],
+164 silly audit   'enhanced-resolve': [ '5.20.1' ],
+164 silly audit   'env-paths': [ '3.0.0' ],
+164 silly audit   'es-abstract': [ '1.24.2' ],
+164 silly audit   'es-define-property': [ '1.0.1' ],
+164 silly audit   'es-errors': [ '1.3.0' ],
+164 silly audit   'es-iterator-helpers': [ '1.3.2' ],
+164 silly audit   'es-object-atoms': [ '1.1.1' ],
+164 silly audit   'es-set-tostringtag': [ '2.1.0' ],
+164 silly audit   'es-shim-unscopables': [ '1.1.0' ],
+164 silly audit   'es-to-primitive': [ '1.3.0' ],
+164 silly audit   escalade: [ '3.2.0' ],
+164 silly audit   'escape-string-regexp': [ '4.0.0' ],
+164 silly audit   eslint: [ '9.39.4' ],
+164 silly audit   'eslint-config-next': [ '16.2.3' ],
+164 silly audit   globals: [ '16.4.0', '14.0.0' ],
+164 silly audit   'eslint-import-resolver-node': [ '0.3.10' ],
+164 silly audit   'eslint-import-resolver-typescript': [ '3.10.1' ],
+164 silly audit   'eslint-module-utils': [ '2.12.1' ],
+164 silly audit   'eslint-plugin-import': [ '2.32.0' ],
+164 silly audit   'eslint-plugin-jsx-a11y': [ '6.10.2' ],
+164 silly audit   'eslint-plugin-react': [ '7.37.5' ],
+164 silly audit   'eslint-plugin-react-hooks': [ '7.0.1' ],
+164 silly audit   'eslint-scope': [ '8.4.0' ],
+164 silly audit   espree: [ '10.4.0' ],
+164 silly audit   esquery: [ '1.7.0' ],
+164 silly audit   esrecurse: [ '4.3.0' ],
+164 silly audit   estraverse: [ '5.3.0' ],
+164 silly audit   esutils: [ '2.0.3' ],
+164 silly audit   exsolve: [ '1.0.8' ],
+164 silly audit   'fast-check': [ '3.23.2' ],
+164 silly audit   'fast-deep-equal': [ '3.1.3' ],
+164 silly audit   'fast-glob': [ '3.3.1' ],
+164 silly audit   'glob-parent': [ '5.1.2', '6.0.2' ],
+164 silly audit   'fast-json-stable-stringify': [ '2.1.0' ],
+164 silly audit   'fast-levenshtein': [ '2.0.6' ],
+164 silly audit   'fast-uri': [ '3.1.0' ],
+164 silly audit   fastq: [ '1.20.1' ],
+164 silly audit   'file-entry-cache': [ '8.0.0' ],
+164 silly audit   'fill-range': [ '7.1.1' ],
+164 silly audit   'find-up': [ '5.0.0' ],
+164 silly audit   'flat-cache': [ '4.0.1' ],
+164 silly audit   flatted: [ '3.4.2' ],
+164 silly audit   'for-each': [ '0.3.5' ],
+164 silly audit   'foreground-child': [ '3.3.1' ],
+164 silly audit   'function-bind': [ '1.1.2' ],
+164 silly audit   'function.prototype.name': [ '1.1.8' ],
+164 silly audit   'functions-have-names': [ '1.2.3' ],
+164 silly audit   'generate-function': [ '2.3.1' ],
+164 silly audit   'generator-function': [ '2.0.1' ],
+164 silly audit   gensync: [ '1.0.0-beta.2' ],
+164 silly audit   'get-intrinsic': [ '1.3.0' ],
+164 silly audit   'get-port-please': [ '3.2.0' ],
+164 silly audit   'get-proto': [ '1.0.1' ],
+164 silly audit   'get-symbol-description': [ '1.1.0' ],
+164 silly audit   'get-tsconfig': [ '4.13.7' ],
+164 silly audit   giget: [ '2.0.0' ],
+164 silly audit   globalthis: [ '1.0.4' ],
+164 silly audit   gopd: [ '1.2.0' ],
+164 silly audit   'graceful-fs': [ '4.2.11' ],
+164 silly audit   grammex: [ '3.1.12' ],
+164 silly audit   graphmatch: [ '1.1.1' ],
+164 silly audit   'has-bigints': [ '1.1.0' ],
+164 silly audit   'has-flag': [ '4.0.0' ],
+164 silly audit   'has-property-descriptors': [ '1.0.2' ],
+164 silly audit   'has-proto': [ '1.2.0' ],
+164 silly audit   'has-symbols': [ '1.1.0' ],
+164 silly audit   'has-tostringtag': [ '1.0.2' ],
+164 silly audit   hasown: [ '2.0.2' ],
+164 silly audit   'hermes-estree': [ '0.25.1' ],
+164 silly audit   'hermes-parser': [ '0.25.1' ],
+164 silly audit   hono: [ '4.12.12' ],
+164 silly audit   'http-status-codes': [ '2.3.0' ],
+164 silly audit   'iconv-lite': [ '0.7.2' ],
+164 silly audit   'import-fresh': [ '3.3.1' ],
+164 silly audit   imurmurhash: [ '0.1.4' ],
+164 silly audit   'internal-slot': [ '1.1.0' ],
+164 silly audit   'is-array-buffer': [ '3.0.5' ],
+164 silly audit   'is-async-function': [ '2.1.1' ],
+164 silly audit   'is-bigint': [ '1.1.0' ],
+164 silly audit   'is-boolean-object': [ '1.2.2' ],
+164 silly audit   'is-bun-module': [ '2.0.0' ],
+164 silly audit   'is-callable': [ '1.2.7' ],
+164 silly audit   'is-core-module': [ '2.16.1' ],
+164 silly audit   'is-data-view': [ '1.0.2' ],
+164 silly audit   'is-date-object': [ '1.1.0' ],
+164 silly audit   'is-extglob': [ '2.1.1' ],
+164 silly audit   'is-finalizationregistry': [ '1.1.1' ],
+164 silly audit   'is-generator-function': [ '1.1.2' ],
+164 silly audit   'is-glob': [ '4.0.3' ],
+164 silly audit   'is-map': [ '2.0.3' ],
+164 silly audit   'is-negative-zero': [ '2.0.3' ],
+164 silly audit   'is-number': [ '7.0.0' ],
+164 silly audit   'is-number-object': [ '1.1.1' ],
+164 silly audit   'is-property': [ '1.0.2' ],
+164 silly audit   'is-regex': [ '1.2.1' ],
+164 silly audit   'is-set': [ '2.0.3' ],
+164 silly audit   'is-shared-array-buffer': [ '1.0.4' ],
+164 silly audit   'is-string': [ '1.1.1' ],
+164 silly audit   'is-symbol': [ '1.1.1' ],
+164 silly audit   'is-typed-array': [ '1.1.15' ],
+164 silly audit   'is-weakmap': [ '2.0.2' ],
+164 silly audit   'is-weakref': [ '1.1.1' ],
+164 silly audit   'is-weakset': [ '2.0.4' ],
+164 silly audit   isarray: [ '2.0.5' ],
+164 silly audit   isexe: [ '2.0.0' ],
+164 silly audit   'iterator.prototype': [ '1.1.5' ],
+164 silly audit   jiti: [ '2.6.1' ],
+164 silly audit   'js-tokens': [ '4.0.0' ],
+164 silly audit   'js-yaml': [ '4.1.1' ],
+164 silly audit   jsesc: [ '3.1.0' ],
+164 silly audit   'json-buffer': [ '3.0.1' ],
+164 silly audit   'json-stable-stringify-without-jsonify': [ '1.0.1' ],
+164 silly audit   json5: [ '2.2.3', '1.0.2' ],
+164 silly audit   'jsx-ast-utils': [ '3.3.5' ],
+164 silly audit   keyv: [ '4.5.4' ],
+164 silly audit   'language-subtag-registry': [ '0.3.23' ],
+164 silly audit   'language-tags': [ '1.0.9' ],
+164 silly audit   levn: [ '0.4.1' ],
+164 silly audit   lightningcss: [ '1.32.0' ],
+164 silly audit   'lightningcss-android-arm64': [ '1.32.0' ],
+164 silly audit   'lightningcss-darwin-arm64': [ '1.32.0' ],
+164 silly audit   'lightningcss-darwin-x64': [ '1.32.0' ],
+164 silly audit   'lightningcss-freebsd-x64': [ '1.32.0' ],
+164 silly audit   'lightningcss-linux-arm-gnueabihf': [ '1.32.0' ],
+164 silly audit   'lightningcss-linux-arm64-gnu': [ '1.32.0' ],
+164 silly audit   'lightningcss-linux-arm64-musl': [ '1.32.0' ],
+164 silly audit   'lightningcss-linux-x64-gnu': [ '1.32.0' ],
+164 silly audit   'lightningcss-linux-x64-musl': [ '1.32.0' ],
+164 silly audit   'lightningcss-win32-arm64-msvc': [ '1.32.0' ],
+164 silly audit   'lightningcss-win32-x64-msvc': [ '1.32.0' ],
+164 silly audit   'locate-path': [ '6.0.0' ],
+164 silly audit   'lodash.merge': [ '4.6.2' ],
+164 silly audit   long: [ '5.3.2' ],
+164 silly audit   'loose-envify': [ '1.4.0' ],
+164 silly audit   'lru-cache': [ '5.1.1' ],
+164 silly audit   'lru.min': [ '1.1.4' ],
+164 silly audit   'magic-string': [ '0.30.21' ],
+164 silly audit   'math-intrinsics': [ '1.1.0' ],
+164 silly audit   merge2: [ '1.4.1' ],
+164 silly audit   micromatch: [ '4.0.8' ],
+164 silly audit   minimist: [ '1.2.8' ],
+164 silly audit   ms: [ '2.1.3' ],
+164 silly audit   mysql2: [ '3.15.3' ],
+164 silly audit   'named-placeholders': [ '1.1.6' ],
+164 silly audit   nanoid: [ '3.3.11' ],
+164 silly audit   'napi-postinstall': [ '0.3.4' ],
+164 silly audit   'natural-compare': [ '1.4.0' ],
+164 silly audit   next: [ '16.2.3' ],
+164 silly audit   postcss: [ '8.4.31', '8.5.9' ],
+164 silly audit   'node-exports-info': [ '1.6.0' ],
+164 silly audit   'node-fetch-native': [ '1.6.7' ],
+164 silly audit   'node-releases': [ '2.0.37' ],
+164 silly audit   nypm: [ '0.6.5' ],
+164 silly audit   'object-assign': [ '4.1.1' ],
+164 silly audit   'object-inspect': [ '1.13.4' ],
+164 silly audit   'object-keys': [ '1.1.1' ],
+164 silly audit   'object.assign': [ '4.1.7' ],
+164 silly audit   'object.entries': [ '1.1.9' ],
+164 silly audit   'object.fromentries': [ '2.0.8' ],
+164 silly audit   'object.groupby': [ '1.0.3' ],
+164 silly audit   'object.values': [ '1.2.1' ],
+164 silly audit   ohash: [ '2.0.11' ],
+164 silly audit   optionator: [ '0.9.4' ],
+164 silly audit   'own-keys': [ '1.0.1' ],
+164 silly audit   'p-limit': [ '3.1.0' ],
+164 silly audit   'p-locate': [ '5.0.0' ],
+164 silly audit   'parent-module': [ '1.0.1' ],
+164 silly audit   'path-exists': [ '4.0.0' ],
+164 silly audit   'path-key': [ '3.1.1' ],
+164 silly audit   'path-parse': [ '1.0.7' ],
+164 silly audit   pathe: [ '2.0.3' ],
+164 silly audit   'perfect-debounce': [ '1.0.0' ],
+164 silly audit   picocolors: [ '1.1.1' ],
+164 silly audit   picomatch: [ '2.3.2', '4.0.4' ],
+164 silly audit   'pkg-types': [ '2.3.0' ],
+164 silly audit   'possible-typed-array-names': [ '1.1.0' ],
+164 silly audit   postgres: [ '3.4.7' ],
+164 silly audit   'prelude-ls': [ '1.2.1' ],
+164 silly audit   prisma: [ '7.7.0' ],
+164 silly audit   'prop-types': [ '15.8.1' ],
+164 silly audit   'proper-lockfile': [ '4.1.2' ],
+164 silly audit   'signal-exit': [ '3.0.7', '4.1.0' ],
+164 silly audit   punycode: [ '2.3.1' ],
+164 silly audit   'pure-rand': [ '6.1.0' ],
+164 silly audit   'queue-microtask': [ '1.2.3' ],
+164 silly audit   rc9: [ '2.1.2' ],
+164 silly audit   react: [ '19.2.4' ],
+164 silly audit   'react-dom': [ '19.2.4' ],
+164 silly audit   'react-is': [ '16.13.1' ],
+164 silly audit   readdirp: [ '4.1.2' ],
+164 silly audit   'reflect.getprototypeof': [ '1.0.10' ],
+164 silly audit   'regexp.prototype.flags': [ '1.5.4' ],
+164 silly audit   remeda: [ '2.33.4' ],
+164 silly audit   'require-from-string': [ '2.0.2' ],
+164 silly audit   resolve: [ '2.0.0-next.6' ],
+164 silly audit   'resolve-from': [ '4.0.0' ],
+164 silly audit   'resolve-pkg-maps': [ '1.0.0' ],
+164 silly audit   retry: [ '0.12.0' ],
+164 silly audit   reusify: [ '1.1.0' ],
+164 silly audit   'run-parallel': [ '1.2.0' ],
+164 silly audit   'safe-array-concat': [ '1.1.3' ],
+164 silly audit   'safe-push-apply': [ '1.0.0' ],
+164 silly audit   'safe-regex-test': [ '1.1.0' ],
+164 silly audit   'safer-buffer': [ '2.1.2' ],
+164 silly audit   scheduler: [ '0.27.0' ],
+164 silly audit   'seq-queue': [ '0.0.5' ],
+164 silly audit   'set-function-length': [ '1.2.2' ],
+164 silly audit   'set-function-name': [ '2.0.2' ],
+164 silly audit   'set-proto': [ '1.0.0' ],
+164 silly audit   sharp: [ '0.34.5' ],
+164 silly audit   'shebang-command': [ '2.0.0' ],
+164 silly audit   'shebang-regex': [ '3.0.0' ],
+164 silly audit   'side-channel': [ '1.1.0' ],
+164 silly audit   'side-channel-list': [ '1.0.1' ],
+164 silly audit   'side-channel-map': [ '1.0.1' ],
+164 silly audit   'side-channel-weakmap': [ '1.0.2' ],
+164 silly audit   'source-map-js': [ '1.2.1' ],
+164 silly audit   sqlstring: [ '2.3.3' ],
+164 silly audit   'stable-hash': [ '0.0.5' ],
+164 silly audit   'std-env': [ '3.10.0' ],
+164 silly audit   'stop-iteration-iterator': [ '1.1.0' ],
+164 silly audit   'string.prototype.includes': [ '2.0.1' ],
+164 silly audit   'string.prototype.matchall': [ '4.0.12' ],
+164 silly audit   'string.prototype.repeat': [ '1.0.0' ],
+164 silly audit   'string.prototype.trim': [ '1.2.10' ],
+164 silly audit   'string.prototype.trimend': [ '1.0.9' ],
+164 silly audit   'string.prototype.trimstart': [ '1.0.8' ],
+164 silly audit   'strip-bom': [ '3.0.0' ],
+164 silly audit   'strip-json-comments': [ '3.1.1' ],
+164 silly audit   'styled-jsx': [ '5.1.6' ],
+164 silly audit   'supports-color': [ '7.2.0' ],
+164 silly audit   'supports-preserve-symlinks-flag': [ '1.0.0' ],
+164 silly audit   tailwindcss: [ '4.2.2' ],
+164 silly audit   tapable: [ '2.3.2' ],
+164 silly audit   tinyexec: [ '1.1.1' ],
+164 silly audit   tinyglobby: [ '0.2.16' ],
+164 silly audit   fdir: [ '6.5.0' ],
+164 silly audit   'to-regex-range': [ '5.0.1' ],
+164 silly audit   'ts-api-utils': [ '2.5.0' ],
+164 silly audit   'tsconfig-paths': [ '3.15.0' ],
+164 silly audit   'type-check': [ '0.4.0' ],
+164 silly audit   'typed-array-buffer': [ '1.0.3' ],
+164 silly audit   'typed-array-byte-length': [ '1.0.3' ],
+164 silly audit   'typed-array-byte-offset': [ '1.0.4' ],
+164 silly audit   'typed-array-length': [ '1.0.7' ],
+164 silly audit   typescript: [ '5.9.3' ],
+164 silly audit   'typescript-eslint': [ '8.58.1' ],
+164 silly audit   'unbox-primitive': [ '1.1.0' ],
+164 silly audit   'undici-types': [ '6.21.0' ],
+164 silly audit   'unrs-resolver': [ '1.11.1' ],
+164 silly audit   'update-browserslist-db': [ '1.2.3' ],
+164 silly audit   'uri-js': [ '4.4.1' ],
+164 silly audit   valibot: [ '1.2.0' ],
+164 silly audit   which: [ '2.0.2' ],
+164 silly audit   'which-boxed-primitive': [ '1.1.1' ],
+164 silly audit   'which-builtin-type': [ '1.2.1' ],
+164 silly audit   'which-collection': [ '1.0.2' ],
+164 silly audit   'which-typed-array': [ '1.1.20' ],
+164 silly audit   'word-wrap': [ '1.2.5' ],
+164 silly audit   yallist: [ '3.1.1' ],
+164 silly audit   'yocto-queue': [ '0.1.0' ],
+164 silly audit   zeptomatch: [ '2.1.0' ],
+164 silly audit   zod: [ '4.3.6' ],
+164 silly audit   'zod-validation-error': [ '4.0.2' ],
+164 silly audit   '@prisma/adapter-pg': [ '7.7.0' ],
+164 silly audit   pg: [ '8.20.0' ],
+164 silly audit   '@prisma/driver-adapter-utils': [ '7.7.0' ],
+164 silly audit   '@types/pg': [ '8.20.0' ],
+164 silly audit   'postgres-array': [ '3.0.4', '2.0.0' ],
+164 silly audit   'pg-protocol': [ '1.13.0' ],
+164 silly audit   'pg-types': [ '2.2.0' ],
+164 silly audit   'pg-cloudflare': [ '1.3.0' ],
+164 silly audit   'pg-connection-string': [ '2.12.0' ],
+164 silly audit   'pg-pool': [ '3.13.0' ],
+164 silly audit   pgpass: [ '1.0.5' ],
+164 silly audit   'pg-int8': [ '1.0.1' ],
+164 silly audit   'postgres-bytea': [ '1.0.1' ],
+164 silly audit   'postgres-date': [ '1.0.7' ],
+164 silly audit   'postgres-interval': [ '1.2.0' ],
+164 silly audit   split2: [ '4.2.0' ],
+164 silly audit   xtend: [ '4.0.2' ]
+164 silly audit }
+165 http cache xtend@https://registry.npmjs.org/xtend/-/xtend-4.0.2.tgz 0ms (cache hit)
+166 http cache split2@https://registry.npmjs.org/split2/-/split2-4.2.0.tgz 0ms (cache hit)
+167 http cache postgres-interval@https://registry.npmjs.org/postgres-interval/-/postgres-interval-1.2.0.tgz 0ms (cache hit)
+168 http cache postgres-date@https://registry.npmjs.org/postgres-date/-/postgres-date-1.0.7.tgz 0ms (cache hit)
+169 http cache postgres-bytea@https://registry.npmjs.org/postgres-bytea/-/postgres-bytea-1.0.1.tgz 0ms (cache hit)
+170 http cache pg-int8@https://registry.npmjs.org/pg-int8/-/pg-int8-1.0.1.tgz 0ms (cache hit)
+171 http cache pgpass@https://registry.npmjs.org/pgpass/-/pgpass-1.0.5.tgz 0ms (cache hit)
+172 http cache pg-pool@https://registry.npmjs.org/pg-pool/-/pg-pool-3.13.0.tgz 0ms (cache hit)
+173 http cache pg-connection-string@https://registry.npmjs.org/pg-connection-string/-/pg-connection-string-2.12.0.tgz 0ms (cache hit)
+174 http cache @types/pg@https://registry.npmjs.org/@types/pg/-/pg-8.20.0.tgz 0ms (cache hit)
+175 http cache pg-cloudflare@https://registry.npmjs.org/pg-cloudflare/-/pg-cloudflare-1.3.0.tgz 0ms (cache hit)
+176 http cache postgres-array@https://registry.npmjs.org/postgres-array/-/postgres-array-3.0.4.tgz 0ms (cache hit)
+177 http cache pg-types@https://registry.npmjs.org/pg-types/-/pg-types-2.2.0.tgz 0ms (cache hit)
+178 http cache pg-protocol@https://registry.npmjs.org/pg-protocol/-/pg-protocol-1.13.0.tgz 0ms (cache hit)
+179 http cache pg@https://registry.npmjs.org/pg/-/pg-8.20.0.tgz 0ms (cache hit)
+180 http cache @prisma/adapter-pg@https://registry.npmjs.org/@prisma/adapter-pg/-/adapter-pg-7.7.0.tgz 0ms (cache hit)
+181 http cache postgres-array@https://registry.npmjs.org/postgres-array/-/postgres-array-2.0.0.tgz 1ms (cache hit)
+182 http cache @prisma/driver-adapter-utils@https://registry.npmjs.org/@prisma/driver-adapter-utils/-/driver-adapter-utils-7.7.0.tgz 0ms (cache hit)
+183 silly tarball no local data for xtend@https://registry.npmjs.org/xtend/-/xtend-4.0.2.tgz. Extracting by manifest.
+184 silly tarball no local data for split2@https://registry.npmjs.org/split2/-/split2-4.2.0.tgz. Extracting by manifest.
+185 silly tarball no local data for postgres-interval@https://registry.npmjs.org/postgres-interval/-/postgres-interval-1.2.0.tgz. Extracting by manifest.
+186 silly tarball no local data for postgres-date@https://registry.npmjs.org/postgres-date/-/postgres-date-1.0.7.tgz. Extracting by manifest.
+187 silly tarball no local data for postgres-bytea@https://registry.npmjs.org/postgres-bytea/-/postgres-bytea-1.0.1.tgz. Extracting by manifest.
+188 silly tarball no local data for pg-int8@https://registry.npmjs.org/pg-int8/-/pg-int8-1.0.1.tgz. Extracting by manifest.
+189 silly tarball no local data for pgpass@https://registry.npmjs.org/pgpass/-/pgpass-1.0.5.tgz. Extracting by manifest.
+190 silly tarball no local data for pg-pool@https://registry.npmjs.org/pg-pool/-/pg-pool-3.13.0.tgz. Extracting by manifest.
+191 silly tarball no local data for pg-connection-string@https://registry.npmjs.org/pg-connection-string/-/pg-connection-string-2.12.0.tgz. Extracting by manifest.
+192 silly tarball no local data for @types/pg@https://registry.npmjs.org/@types/pg/-/pg-8.20.0.tgz. Extracting by manifest.
+193 silly tarball no local data for pg-cloudflare@https://registry.npmjs.org/pg-cloudflare/-/pg-cloudflare-1.3.0.tgz. Extracting by manifest.
+194 silly tarball no local data for postgres-array@https://registry.npmjs.org/postgres-array/-/postgres-array-3.0.4.tgz. Extracting by manifest.
+195 silly tarball no local data for pg-types@https://registry.npmjs.org/pg-types/-/pg-types-2.2.0.tgz. Extracting by manifest.
+196 silly tarball no local data for pg-protocol@https://registry.npmjs.org/pg-protocol/-/pg-protocol-1.13.0.tgz. Extracting by manifest.
+197 silly tarball no local data for pg@https://registry.npmjs.org/pg/-/pg-8.20.0.tgz. Extracting by manifest.
+198 silly tarball no local data for @prisma/adapter-pg@https://registry.npmjs.org/@prisma/adapter-pg/-/adapter-pg-7.7.0.tgz. Extracting by manifest.
+199 silly tarball no local data for postgres-array@https://registry.npmjs.org/postgres-array/-/postgres-array-2.0.0.tgz. Extracting by manifest.
+200 http fetch POST 200 https://registry.npmjs.org/-/npm/v1/security/advisories/bulk 443ms
+201 silly audit report {
+201 silly audit report   '@hono/node-server': [
+201 silly audit report     {
+201 silly audit report       id: 1116281,
+201 silly audit report       url: 'https://github.com/advisories/GHSA-92pp-h63x-v22m',
+201 silly audit report       title: '@hono/node-server: Middleware bypass via repeated slashes in serveStatic',
+201 silly audit report       severity: 'moderate',
+201 silly audit report       vulnerable_versions: '<1.19.13',
+201 silly audit report       cwe: [Array],
+201 silly audit report       cvss: [Object]
+201 silly audit report     }
+201 silly audit report   ]
+201 silly audit report }
+202 silly packumentCache corgi:https://registry.npmjs.org/@hono%2fnode-server cache-miss
+203 http fetch GET 200 https://registry.npmjs.org/pg-int8/-/pg-int8-1.0.1.tgz 430ms (cache miss)
+204 http fetch GET 200 https://registry.npmjs.org/postgres-bytea/-/postgres-bytea-1.0.1.tgz 433ms (cache miss)
+205 http fetch GET 200 https://registry.npmjs.org/postgres-date/-/postgres-date-1.0.7.tgz 439ms (cache miss)
+206 http fetch GET 200 https://registry.npmjs.org/postgres-interval/-/postgres-interval-1.2.0.tgz 440ms (cache miss)
+207 http fetch GET 200 https://registry.npmjs.org/split2/-/split2-4.2.0.tgz 454ms (cache miss)
+208 http fetch GET 200 https://registry.npmjs.org/postgres-array/-/postgres-array-3.0.4.tgz 448ms (cache miss)
+209 http fetch GET 200 https://registry.npmjs.org/pgpass/-/pgpass-1.0.5.tgz 471ms (cache miss)
+210 http fetch GET 200 https://registry.npmjs.org/postgres-array/-/postgres-array-2.0.0.tgz 467ms (cache miss)
+211 http fetch GET 200 https://registry.npmjs.org/xtend/-/xtend-4.0.2.tgz 517ms (cache miss)
+212 http fetch GET 200 https://registry.npmjs.org/pg-connection-string/-/pg-connection-string-2.12.0.tgz 517ms (cache miss)
+213 http fetch GET 200 https://registry.npmjs.org/pg-pool/-/pg-pool-3.13.0.tgz 521ms (cache miss)
+214 http fetch GET 200 https://registry.npmjs.org/@types/pg/-/pg-8.20.0.tgz 547ms (cache miss)
+215 http fetch GET 200 https://registry.npmjs.org/@prisma/adapter-pg/-/adapter-pg-7.7.0.tgz 558ms (cache miss)
+216 http fetch GET 200 https://registry.npmjs.org/pg-types/-/pg-types-2.2.0.tgz 603ms (cache miss)
+217 http fetch GET 200 https://registry.npmjs.org/pg-cloudflare/-/pg-cloudflare-1.3.0.tgz 610ms (cache miss)
+218 http fetch GET 200 https://registry.npmjs.org/pg/-/pg-8.20.0.tgz 656ms (cache miss)
+219 http fetch GET 200 https://registry.npmjs.org/pg-protocol/-/pg-protocol-1.13.0.tgz 702ms (cache miss)
+220 http fetch GET 200 https://registry.npmjs.org/@hono%2fnode-server 480ms (cache revalidated)
+221 silly packumentCache corgi:https://registry.npmjs.org/@hono%2fnode-server set size:84452 disposed:false
+222 silly packumentCache corgi:https://registry.npmjs.org/@prisma%2fdev cache-miss
+223 warn cleanup Failed to remove some directories [
+223 warn cleanup   [
+223 warn cleanup     'D:\\SITES\\2acontrole\\node_modules\\.better-sqlite3-vxT7drIb',
+223 warn cleanup     [Error: EPERM: operation not permitted, unlink 'D:\SITES\2acontrole\node_modules\.better-sqlite3-vxT7drIb\build\Release\better_sqlite3.node'] {
+223 warn cleanup       errno: -4048,
+223 warn cleanup       code: 'EPERM',
+223 warn cleanup       syscall: 'unlink',
+223 warn cleanup       path: 'D:\\SITES\\2acontrole\\node_modules\\.better-sqlite3-vxT7drIb\\build\\Release\\better_sqlite3.node'
+223 warn cleanup     }
+223 warn cleanup   ]
+223 warn cleanup ]
+224 http fetch GET 200 https://registry.npmjs.org/@prisma%2fdev 547ms (cache revalidated)
+225 silly packumentCache corgi:https://registry.npmjs.org/@prisma%2fdev set size:959256 disposed:false
+226 silly packumentCache corgi:https://registry.npmjs.org/prisma cache-miss
+227 http fetch GET 200 https://registry.npmjs.org/prisma 1330ms (cache revalidated)
+228 silly packumentCache corgi:https://registry.npmjs.org/prisma set size:22769242 disposed:false
+229 silly packumentCache corgi:https://registry.npmjs.org/@prisma%2fclient cache-miss
+230 http fetch GET 200 https://registry.npmjs.org/@prisma%2fclient 1551ms (cache revalidated)
+231 silly packumentCache corgi:https://registry.npmjs.org/@prisma%2fclient set size:37741727 disposed:false
+232 silly ADD node_modules/xtend
+233 silly ADD node_modules/split2
+234 silly ADD node_modules/postgres-interval
+235 silly ADD node_modules/postgres-date
+236 silly ADD node_modules/postgres-bytea
+237 silly ADD node_modules/pg-int8
+238 silly ADD node_modules/pgpass
+239 silly ADD node_modules/pg-pool
+240 silly ADD node_modules/pg-connection-string
+241 silly ADD node_modules/pg-cloudflare
+242 silly ADD node_modules/pg-types
+243 silly ADD node_modules/pg-types/node_modules/postgres-array
+244 silly ADD node_modules/pg-protocol
+245 silly ADD node_modules/postgres-array
+246 silly ADD node_modules/@types/pg
+247 silly ADD node_modules/pg
+248 silly ADD node_modules/@prisma/adapter-pg
+249 silly REMOVE node_modules/@tybys/wasm-util
+250 silly REMOVE node_modules/tar-stream
+251 silly REMOVE node_modules/rc
+252 silly REMOVE node_modules/rc/node_modules/strip-json-comments
+253 silly REMOVE node_modules/@napi-rs/wasm-runtime
+254 silly CHANGE node_modules/@prisma/driver-adapter-utils
+255 silly REMOVE node_modules/@prisma/adapter-better-sqlite3
+256 silly REMOVE node_modules/readable-stream
+257 silly REMOVE node_modules/tar-fs
+258 silly REMOVE node_modules/@emnapi/wasi-threads
+259 silly REMOVE node_modules/@emnapi/core
+260 silly REMOVE node_modules/wrappy
+261 silly REMOVE node_modules/util-deprecate
+262 silly REMOVE node_modules/tunnel-agent
+263 silly REMOVE node_modules/string_decoder
+264 silly REMOVE node_modules/simple-concat
+265 silly REMOVE node_modules/simple-get
+266 silly REMOVE node_modules/safe-buffer
+267 silly REMOVE node_modules/pump
+268 silly REMOVE node_modules/file-uri-to-path
+269 silly REMOVE node_modules/prebuild-install
+270 silly REMOVE node_modules/github-from-package
+271 silly REMOVE node_modules/once
+272 silly REMOVE node_modules/napi-build-utils
+273 silly REMOVE node_modules/node-abi
+274 silly REMOVE node_modules/node-abi/node_modules/semver
+275 silly REMOVE node_modules/mkdirp-classic
+276 silly REMOVE node_modules/mimic-response
+277 silly REMOVE node_modules/ini
+278 silly REMOVE node_modules/ieee754
+279 silly REMOVE node_modules/inherits
+280 silly REMOVE node_modules/end-of-stream
+281 silly REMOVE node_modules/fs-constants
+282 silly REMOVE node_modules/expand-template
+283 silly REMOVE node_modules/decompress-response
+284 silly REMOVE node_modules/deep-extend
+285 silly REMOVE node_modules/base64-js
+286 silly REMOVE node_modules/chownr
+287 silly REMOVE node_modules/buffer
+288 silly REMOVE node_modules/bl
+289 silly REMOVE node_modules/bindings
+290 silly REMOVE node_modules/better-sqlite3
+291 verbose cwd D:\SITES\2acontrole
+292 verbose os Windows_NT 10.0.26200
+293 verbose node v24.14.1
+294 verbose npm  v11.11.0
+295 verbose exit 0
+296 info ok

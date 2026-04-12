@@ -1,8 +1,64 @@
 import { Pool, QueryResult } from "pg";
 
+const connectionString = process.env.DATABASE_URL;
+
+if (!connectionString) {
+  throw new Error("DATABASE_URL is not defined. Please set it in .env.local or your deployment environment.");
+}
+
 const pool = new Pool({
-  connectionString: process.env.DATABASE_URL,
+  connectionString,
+  ssl: {
+    rejectUnauthorized: false,
+  },
 });
+
+function quoteIdentifier(identifier: string) {
+  return `"${identifier.replace(/"/g, '""')}"`;
+}
+
+function parseClientRow(row: any): Client {
+  return {
+    ...row,
+    monthlyFee: Number(row.monthlyFee),
+    dueDay: Number(row.dueDay),
+    sortOrder: Number(row.sortOrder),
+    deletedAt: row.deletedAt ? new Date(row.deletedAt) : null,
+    createdAt: new Date(row.createdAt),
+    updatedAt: new Date(row.updatedAt),
+  };
+}
+
+function parseExpenseRow(row: any): Expense {
+  return {
+    ...row,
+    amount: Number(row.amount),
+    dueDay: Number(row.dueDay),
+    sortOrder: Number(row.sortOrder),
+    deletedAt: row.deletedAt ? new Date(row.deletedAt) : null,
+    createdAt: new Date(row.createdAt),
+    updatedAt: new Date(row.updatedAt),
+  };
+}
+
+function parseClientPaymentRow(row: any): ClientPayment {
+  return {
+    ...row,
+    clientId: Number(row.clientId),
+    amount: Number(row.amount),
+    paidAt: new Date(row.paidAt),
+    createdAt: new Date(row.createdAt),
+  };
+}
+
+function parseExpenseSettlementRow(row: any): ExpenseSettlement {
+  return {
+    ...row,
+    expenseId: Number(row.expenseId),
+    paidAt: new Date(row.paidAt),
+    createdAt: new Date(row.createdAt),
+  };
+}
 
 export type Client = {
   id: number;
@@ -51,6 +107,23 @@ export type ExpenseSettlement = {
   createdAt: Date;
 };
 
+export type User = {
+  id: number;
+  username: string;
+  email: string;
+  passwordHash: string;
+  createdAt: Date;
+  updatedAt: Date;
+};
+
+export type Session = {
+  id: number;
+  userId: number;
+  token: string;
+  expiresAt: Date;
+  createdAt: Date;
+};
+
 export const db = {
   client: {
     async findFirst(options: {
@@ -59,15 +132,17 @@ export const db = {
     }): Promise<Partial<Client> | null> {
       const orderByClause = options.orderBy
         ? Object.entries(options.orderBy)
-          .map(([key, value]) => `${key} ${value.toUpperCase()}`)
+          .map(([key, value]) => `${quoteIdentifier(key)} ${value.toUpperCase()}`)
           .join(", ")
-        : "id ASC";
+        : `${quoteIdentifier("id")} ASC`;
 
-      const selectFields = options.select ? Object.keys(options.select) : ["*"];
+      const selectFields = options.select
+        ? Object.keys(options.select).map((field) => quoteIdentifier(field))
+        : ["*"];
 
       const query = `SELECT ${selectFields.join(", ")} FROM "Client" ORDER BY ${orderByClause} LIMIT 1`;
       const result = await pool.query(query);
-      return result.rows[0] || null;
+      return result.rows[0] ? parseClientRow(result.rows[0]) : null;
     },
 
     async findMany(options: {
@@ -111,7 +186,7 @@ export const db = {
       }
 
       const result = await pool.query(query, params);
-      return result.rows;
+      return result.rows.map(parseClientRow);
     },
 
     async create(data: {
@@ -133,7 +208,7 @@ export const db = {
         data.dueDay,
         data.sortOrder,
       ]);
-      return result.rows[0];
+      return parseClientRow(result.rows[0]);
     },
 
     async findUniqueOrThrow(options: {
@@ -144,7 +219,7 @@ export const db = {
       if (result.rows.length === 0) {
         throw new Error(`No Client found with id ${options.where.id}`);
       }
-      return result.rows[0];
+      return parseClientRow(result.rows[0]);
     },
 
     async update(options: {
@@ -167,7 +242,7 @@ export const db = {
 
       const values = [...entries.map(([_, value]) => value), options.where.id];
       const result = await pool.query(query, values);
-      return result.rows[0];
+      return parseClientRow(result.rows[0]);
     },
   },
 
@@ -234,15 +309,17 @@ export const db = {
     }): Promise<Partial<Expense> | null> {
       const orderByClause = options.orderBy
         ? Object.entries(options.orderBy)
-          .map(([key, value]) => `${key} ${value.toUpperCase()}`)
+          .map(([key, value]) => `${quoteIdentifier(key)} ${value.toUpperCase()}`)
           .join(", ")
-        : "id ASC";
+        : `${quoteIdentifier("id")} ASC`;
 
-      const selectFields = options.select ? Object.keys(options.select) : ["*"];
+      const selectFields = options.select
+        ? Object.keys(options.select).map((field) => quoteIdentifier(field))
+        : ["*"];
 
       const query = `SELECT ${selectFields.join(", ")} FROM "Expense" ORDER BY ${orderByClause} LIMIT 1`;
       const result = await pool.query(query);
-      return result.rows[0] || null;
+      return result.rows[0] ? parseExpenseRow(result.rows[0]) : null;
     },
 
     async findMany(options: {
@@ -286,7 +363,7 @@ export const db = {
       }
 
       const result = await pool.query(query, params);
-      return result.rows;
+      return result.rows.map(parseExpenseRow);
     },
 
     async create(data: {
@@ -308,7 +385,7 @@ export const db = {
         data.dueDay,
         data.sortOrder,
       ]);
-      return result.rows[0];
+      return parseExpenseRow(result.rows[0]);
     },
 
     async findUniqueOrThrow(options: {
@@ -319,7 +396,7 @@ export const db = {
       if (result.rows.length === 0) {
         throw new Error(`No Expense found with id ${options.where.id}`);
       }
-      return result.rows[0];
+      return parseExpenseRow(result.rows[0]);
     },
 
     async update(options: {
@@ -342,7 +419,7 @@ export const db = {
 
       const values = [...entries.map(([_, value]) => value), options.where.id];
       const result = await pool.query(query, values);
-      return result.rows[0];
+      return parseExpenseRow(result.rows[0]);
     },
   },
 
@@ -400,9 +477,89 @@ export const db = {
     },
   },
 
+  user: {
+    async create(data: {
+      username: string;
+      email: string;
+      passwordHash: string;
+    }): Promise<User> {
+      const query = `
+        INSERT INTO "User" (username, email, "passwordHash", "createdAt", "updatedAt")
+        VALUES ($1, $2, $3, NOW(), NOW())
+        RETURNING *
+      `;
+      const result = await pool.query(query, [
+        data.username,
+        data.email,
+        data.passwordHash,
+      ]);
+      return result.rows[0];
+    },
+
+    async findFirst(options: {
+      where: { username?: string; email?: string };
+    }): Promise<User | null> {
+      let query = `SELECT * FROM "User" WHERE `;
+      const params: any[] = [];
+
+      if (options.where.username) {
+        params.push(options.where.username);
+        query += `username = $${params.length}`;
+      } else if (options.where.email) {
+        params.push(options.where.email);
+        query += `email = $${params.length}`;
+      }
+
+      const result = await pool.query(query, params);
+      return result.rows[0] || null;
+    },
+
+    async findByIdOrThrow(id: number): Promise<User> {
+      const query = `SELECT * FROM "User" WHERE id = $1`;
+      const result = await pool.query(query, [id]);
+      if (result.rows.length === 0) {
+        throw new Error(`No User found with id ${id}`);
+      }
+      return result.rows[0];
+    },
+  },
+
+  session: {
+    async create(data: {
+      token: string;
+      userId: number;
+      expiresAt: Date;
+    }): Promise<Session> {
+      const query = `
+        INSERT INTO "Session" (token, "userId", "expiresAt", "createdAt")
+        VALUES ($1, $2, $3, NOW())
+        RETURNING *
+      `;
+      const result = await pool.query(query, [
+        data.token,
+        data.userId,
+        data.expiresAt,
+      ]);
+      return result.rows[0];
+    },
+
+    async findByToken(token: string): Promise<Session | null> {
+      const query = `SELECT * FROM "Session" WHERE token = $1 AND "expiresAt" > NOW()`;
+      const result = await pool.query(query, [token]);
+      return result.rows[0] || null;
+    },
+
+    async deleteMany(options: {
+      where: { token: string };
+    }): Promise<void> {
+      const query = `DELETE FROM "Session" WHERE token = $1`;
+      await pool.query(query, [options.where.token]);
+    },
+  },
+
   // Transaction helper
   async transaction<T>(
-    callback: (db: typeof db) => Promise<T>
+    callback: (db: any) => Promise<T>
   ): Promise<T> {
     const client = await pool.connect();
     try {

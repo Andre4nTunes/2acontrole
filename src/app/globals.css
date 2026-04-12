@@ -26,10 +26,13 @@
 }
 
 html {
+  height: 100vh;
+  width: 100vw;
   background:
     radial-gradient(circle at top left, rgba(255, 255, 255, 0.06), transparent 28%),
     radial-gradient(circle at top right, rgba(250, 204, 21, 0.08), transparent 20%),
     linear-gradient(180deg, #151515 0%, #080808 48%, #020202 100%);
+  background-attachment: fixed;
 }
 
 body {

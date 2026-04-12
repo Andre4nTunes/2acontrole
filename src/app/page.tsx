@@ -7,6 +7,8 @@ import {
   toggleClientPayment,
   toggleExpenseActive,
   toggleExpenseSettlement,
+  updateClient,
+  updateExpense,
 } from "@/app/actions";
 import {
   getCompetenceLabel,
@@ -31,6 +33,7 @@ type LoadDashboardResult =
   | {
       ok: false;
       message: string;
+      error?: string;
     };
 
 function StatCard({
@@ -58,10 +61,14 @@ async function loadDashboardData(competence: string): Promise<LoadDashboardResul
   } catch (error) {
     console.error("Failed to load dashboard data", error);
 
+    const errorMessage =
+      error instanceof Error ? error.message : String(error);
+
     return {
       ok: false,
       message:
         "Nao foi possivel carregar os dados do painel. Verifique a variavel DATABASE_URL no deploy e a conectividade com o banco PostgreSQL do Supabase.",
+      error: errorMessage,
     };
   }
 }
@@ -86,8 +93,12 @@ export default async function Home({ searchParams }: HomeProps) {
             </h1>
             <p className="mt-5 max-w-2xl text-base leading-7 text-[var(--muted)] sm:text-lg">
               {dashboardResult.message}
-            </p>
-            <div className="mt-6 rounded-[28px] border border-[var(--border)] bg-[var(--card-strong)] p-6">
+            </p>              {dashboardResult.error ? (
+                <div className="mt-4 rounded-[20px] border border-red-300 bg-red-50 p-4 text-sm text-red-900">
+                  <p className="font-semibold">Detalhes do erro:</p>
+                  <p>{dashboardResult.error}</p>
+                </div>
+              ) : null}            <div className="mt-6 rounded-[28px] border border-[var(--border)] bg-[var(--card-strong)] p-6">
               <p className="text-sm uppercase tracking-[0.24em] text-[var(--muted)]">
                 Competencia solicitada
               </p>
@@ -189,9 +200,9 @@ export default async function Home({ searchParams }: HomeProps) {
             description={`${data.expenses.filter((expense) => expense.paid).length} contas quitadas`}
           />
           <StatCard
-            title="Saldo"
-            value={formatCurrency(data.summary.currentBalance)}
-            description={`Saldo projetado: ${formatCurrency(data.summary.projectedBalance)}`}
+            title="Saldo projetado"
+            value={formatCurrency(data.summary.projectedBalance)}
+            description={`Saldo atual: ${formatCurrency(data.summary.currentBalance)}`}
           />
         </section>
 
@@ -207,6 +218,8 @@ export default async function Home({ searchParams }: HomeProps) {
           toggleClientPaymentAction={toggleClientPayment}
           toggleExpenseActiveAction={toggleExpenseActive}
           toggleExpenseSettlementAction={toggleExpenseSettlement}
+          updateClientAction={updateClient}
+          updateExpenseAction={updateExpense}
         />
       </div>
     </main>

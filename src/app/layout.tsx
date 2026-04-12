@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Montserrat } from "next/font/google";
 import "./globals.css";
+import { getCurrentUser } from "@/lib/auth";
+import { UserHeader } from "@/components/user-header";
 
 const montserrat = Montserrat({
   variable: "--font-body",
@@ -13,17 +15,22 @@ export const metadata: Metadata = {
   description: "Painel para acompanhar clientes, recebimentos e contas mensais.",
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const user = await getCurrentUser();
+
   return (
     <html
       lang="pt-BR"
       className={`${montserrat.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+        {user && <UserHeader username={user.username} />}
+        {children}
+      </body>
     </html>
   );
 }

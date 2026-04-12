@@ -124,13 +124,13 @@ export async function getDashboardData(competence: string): Promise<DashboardDat
     .filter((client) => client.active)
     .reduce((sum, client) => sum + client.monthlyFee, 0);
   const totalReceived = clientChecklist
-    .filter((client) => client.received)
+    .filter((client) => client.active && client.received)
     .reduce((sum, client) => sum + client.monthlyFee, 0);
   const totalToPay = expenseChecklist
     .filter((expense) => expense.active)
     .reduce((sum, expense) => sum + expense.amount, 0);
   const totalPaid = expenseChecklist
-    .filter((expense) => expense.paid)
+    .filter((expense) => expense.active && expense.paid)
     .reduce((sum, expense) => sum + expense.amount, 0);
 
   return {

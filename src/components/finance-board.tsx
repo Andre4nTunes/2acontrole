@@ -34,6 +34,8 @@ type FinanceBoardProps = {
   createExpenseAction: ServerAction;
   deleteClientAction: ServerAction;
   deleteExpenseAction: ServerAction;
+  updateClientAction: ServerAction;
+  updateExpenseAction: ServerAction;
   toggleClientPaymentAction: ServerAction;
   toggleExpenseSettlementAction: ServerAction;
   toggleClientActiveAction: ServerAction;
@@ -73,7 +75,10 @@ function SectionShell({
         {!hideToggle ? (
           <button
             className="rounded-full bg-[var(--accent)] px-4 py-2 text-sm font-bold text-black"
-            onClick={onToggle}
+            onClick={(event) => {
+              event.preventDefault();
+              onToggle();
+            }}
             type="button"
           >
             {collapsed ? "Expandir" : "Colapsar"}
@@ -97,7 +102,10 @@ function CollapsedActionButton({
   return (
     <button
       className="w-full rounded-[28px] bg-[var(--accent)] px-6 py-5 text-left text-lg font-bold uppercase tracking-[0.18em] text-black"
-      onClick={onClick}
+      onClick={(event) => {
+        event.preventDefault();
+        onClick();
+      }}
       type="button"
     >
       {label}
@@ -146,6 +154,8 @@ export function FinanceBoard({
   createExpenseAction,
   deleteClientAction,
   deleteExpenseAction,
+  updateClientAction,
+  updateExpenseAction,
   toggleClientPaymentAction,
   toggleExpenseSettlementAction,
   toggleClientActiveAction,
@@ -157,6 +167,8 @@ export function FinanceBoard({
   const [draggedExpenseId, setDraggedExpenseId] = useState<number | null>(null);
   const [clientFormCollapsed, setClientFormCollapsed] = useState(true);
   const [expenseFormCollapsed, setExpenseFormCollapsed] = useState(true);
+  const [editingClientId, setEditingClientId] = useState<number | null>(null);
+  const [editingExpenseId, setEditingExpenseId] = useState<number | null>(null);
 
   useEffect(() => {
     setClientItems(clients);
@@ -225,11 +237,9 @@ export function FinanceBoard({
           subtitle="Clientes"
           collapsed={false}
           onToggle={() => {}}
-          fixedHeight
           hideToggle
         >
-          <div className="h-full overflow-y-auto pr-1">
-            <div className="grid gap-4">
+          <div className="grid gap-4">
               {clientItems.length === 0 ? (
                 <div className="rounded-[24px] border border-dashed border-[var(--border)] bg-white/6 p-6 text-sm text-[var(--muted)]">
                   Nenhum cliente cadastrado ainda.
@@ -265,7 +275,7 @@ export function FinanceBoard({
                       <span className="rounded-full bg-white/8 px-3 py-1 font-semibold">Arraste</span>
                       <span>para reorganizar</span>
                     </div>
-                    <div className="flex min-h-[10rem] flex-col gap-4">
+                    <div className="flex min-h-[5rem] flex-col gap-4">
                       <div>
                         <div className="flex flex-wrap items-center gap-2">
                           <h3 className="text-xl font-semibold">{client.name}</h3>
@@ -309,13 +319,66 @@ export function FinanceBoard({
                             X
                           </button>
                         </form>
+                        <button
+                          className="rounded-full border border-[var(--border)] bg-white/8 px-4 py-2 text-sm font-semibold"
+                          onClick={() => setEditingClientId(client.id)}
+                          type="button"
+                        >
+                          Editar
+                        </button>
                       </div>
+                      {editingClientId === client.id && (
+                        <form action={updateClientAction} className="space-y-3 border-t border-white/8 pt-4">
+                          <input type="hidden" name="clientId" value={client.id} />
+                          <input
+                            className="w-full rounded-2xl border border-[var(--border)] bg-white/8 px-4 py-2 text-sm"
+                            name="name"
+                            placeholder="Nome"
+                            defaultValue={client.name}
+                            required
+                          />
+                          <input
+                            className="w-full rounded-2xl border border-[var(--border)] bg-white/8 px-4 py-2 text-sm"
+                            name="contact"
+                            placeholder="Contato ex: (11) 99999-9999"
+                            defaultValue={client.contact || ""}
+                          />
+                          <input
+                            className="w-full rounded-2xl border border-[var(--border)] bg-white/8 px-4 py-2 text-sm"
+                            name="monthlyFee"
+                            placeholder="Mensalidade ex: 2.000,00"
+                            defaultValue={(client.monthlyFee / 100).toFixed(2).replace('.', ',')}
+                            required
+                          />
+                          <input
+                            className="w-full rounded-2xl border border-[var(--border)] bg-white/8 px-4 py-2 text-sm"
+                            name="dueDay"
+                            type="number"
+                            min="1"
+                            max="31"
+                            placeholder="Dia do vencimento"
+                            defaultValue={client.dueDay}
+                            required
+                          />
+                          <div className="flex gap-2">
+                            <button className="flex-1 rounded-full bg-[var(--accent)] px-4 py-2 text-sm font-semibold text-black">
+                              Salvar
+                            </button>
+                            <button
+                              type="button"
+                              className="flex-1 rounded-full border border-[var(--border)] bg-white/8 px-4 py-2 text-sm font-semibold"
+                              onClick={() => setEditingClientId(null)}
+                            >
+                              Cancelar
+                            </button>
+                          </div>
+                        </form>
+                      )}
                     </div>
                   </article>
                 ))
               )}
             </div>
-          </div>
         </SectionShell>
       </div>
 
@@ -376,11 +439,9 @@ export function FinanceBoard({
           subtitle="Contas mensais"
           collapsed={false}
           onToggle={() => {}}
-          fixedHeight
           hideToggle
         >
-          <div className="h-full overflow-y-auto pr-1">
-            <div className="grid gap-4">
+          <div className="grid gap-4">
               {expenseItems.length === 0 ? (
                 <div className="rounded-[24px] border border-dashed border-[var(--border)] bg-white/6 p-5 text-sm text-[var(--muted)]">
                   Nenhuma conta cadastrada.
@@ -391,7 +452,7 @@ export function FinanceBoard({
                     key={expense.id}
                     className={`cursor-move rounded-[24px] border p-4 ${
                       expense.paid
-                        ? "border-[#5e511c] bg-[#1e1a0d]"
+                        ? "border-[#294436] bg-[#102117]"
                         : "border-[var(--border)] bg-white/5"
                     } ${!expense.active ? "opacity-55" : ""}`}
                     draggable
@@ -416,7 +477,7 @@ export function FinanceBoard({
                       <span className="rounded-full bg-white/8 px-3 py-1 font-semibold">Arraste</span>
                       <span>para reorganizar</span>
                     </div>
-                    <div className="flex min-h-[10rem] flex-col gap-4">
+                    <div className="flex min-h-[5rem] flex-col gap-4">
                       <div>
                         <div className="flex flex-wrap items-center gap-2">
                           <h3 className="text-lg font-semibold">{expense.name}</h3>
@@ -455,13 +516,66 @@ export function FinanceBoard({
                             X
                           </button>
                         </form>
+                        <button
+                          className="rounded-full border border-[var(--border)] bg-white/8 px-4 py-2 text-sm font-semibold"
+                          onClick={() => setEditingExpenseId(expense.id)}
+                          type="button"
+                        >
+                          Editar
+                        </button>
                       </div>
+                      {editingExpenseId === expense.id && (
+                        <form action={updateExpenseAction} className="space-y-3 border-t border-white/8 pt-4">
+                          <input type="hidden" name="expenseId" value={expense.id} />
+                          <input
+                            className="w-full rounded-2xl border border-[var(--border)] bg-white/8 px-4 py-2 text-sm"
+                            name="name"
+                            placeholder="Nome da conta"
+                            defaultValue={expense.name}
+                            required
+                          />
+                          <input
+                            className="w-full rounded-2xl border border-[var(--border)] bg-white/8 px-4 py-2 text-sm"
+                            name="category"
+                            placeholder="Categoria ex: aluguel, internet"
+                            defaultValue={expense.category || ""}
+                          />
+                          <input
+                            className="w-full rounded-2xl border border-[var(--border)] bg-white/8 px-4 py-2 text-sm"
+                            name="amount"
+                            placeholder="Valor mensal ex: 120,00"
+                            defaultValue={(expense.amount / 100).toFixed(2).replace('.', ',')}
+                            required
+                          />
+                          <input
+                            className="w-full rounded-2xl border border-[var(--border)] bg-white/8 px-4 py-2 text-sm"
+                            name="dueDay"
+                            type="number"
+                            min="1"
+                            max="31"
+                            placeholder="Dia do vencimento"
+                            defaultValue={expense.dueDay}
+                            required
+                          />
+                          <div className="flex gap-2">
+                            <button className="flex-1 rounded-full bg-[var(--accent)] px-4 py-2 text-sm font-semibold text-black">
+                              Salvar
+                            </button>
+                            <button
+                              type="button"
+                              className="flex-1 rounded-full border border-[var(--border)] bg-white/8 px-4 py-2 text-sm font-semibold"
+                              onClick={() => setEditingExpenseId(null)}
+                            >
+                              Cancelar
+                            </button>
+                          </div>
+                        </form>
+                      )}
                     </div>
                   </article>
                 ))
               )}
             </div>
-          </div>
         </SectionShell>
       </div>
     </section>

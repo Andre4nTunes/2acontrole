@@ -28,7 +28,6 @@ export default async function RootLayout({
       className={`${montserrat.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
-        {user && <UserHeader username={user.username} />}
         {children}
       </body>
     </html>

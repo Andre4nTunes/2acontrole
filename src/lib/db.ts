@@ -11,6 +11,14 @@ const pool = new Pool({
   ssl: {
     rejectUnauthorized: false,
   },
+  // Adicionar timeouts mais generosos para produção
+  connectionTimeoutMillis: 30000,
+  idleTimeoutMillis: 30000,
+});
+
+// Adicionar listener para erros de conexão
+pool.on('error', (err) => {
+  console.error('Unexpected error on idle client', err);
 });
 
 function quoteIdentifier(identifier: string) {
@@ -508,10 +516,18 @@ export const db = {
       } else if (options.where.email) {
         params.push(options.where.email);
         query += `email = $${params.length}`;
+      } else {
+        // Se nenhum critério for fornecido, retornar null para evitar erro SQL
+        return null;
       }
 
-      const result = await pool.query(query, params);
-      return result.rows[0] || null;
+      try {
+        const result = await pool.query(query, params);
+        return result.rows[0] || null;
+      } catch (error) {
+        console.error("Database findFirst error:", error);
+        throw error;
+      }
     },
 
     async findByIdOrThrow(id: number): Promise<User> {

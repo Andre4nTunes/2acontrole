@@ -250,109 +250,119 @@ export async function updateExpense(formData: FormData) {
 }
 
 export async function register(prevState: any, formData: FormData) {
-  const username = String(formData.get("username") ?? "").trim();
-  const email = String(formData.get("email") ?? "").trim();
-  const password = String(formData.get("password") ?? "").trim();
+  try {
+    const username = String(formData.get("username") ?? "").trim();
+    const email = String(formData.get("email") ?? "").trim();
+    const password = String(formData.get("password") ?? "").trim();
 
-  if (!username) {
-    return { error: "Informe o usuário." };
-  }
+    if (!username) {
+      return { error: "Informe o usuário." };
+    }
 
-  if (!email) {
-    return { error: "Informe o email." };
-  }
+    if (!email) {
+      return { error: "Informe o email." };
+    }
 
-  if (!password || password.length < 6) {
-    return { error: "A senha deve ter pelo menos 6 caracteres." };
-  }
+    if (!password || password.length < 6) {
+      return { error: "A senha deve ter pelo menos 6 caracteres." };
+    }
 
-  // Check if password is breached
-  const breached = await isPasswordBreached(password);
-  if (breached) {
-    return { warning: "Esta senha foi encontrada em vazamentos de dados. Recomendamos escolher uma senha mais segura." };
-  }
+    // Check if password is breached
+    const breached = await isPasswordBreached(password);
+    if (breached) {
+      return { warning: "Esta senha foi encontrada em vazamentos de dados. Recomendamos escolher uma senha mais segura." };
+    }
 
-  // Check if user already exists
-  const existingUser = await db.user.findFirst({
-    where: {
+    // Check if user already exists
+    const existingUser = await db.user.findFirst({
+      where: {
+        username,
+      },
+    });
+
+    if (existingUser) {
+      return { error: "Este usuário já existe." };
+    }
+
+    const existingEmail = await db.user.findFirst({
+      where: {
+        email,
+      },
+    });
+
+    if (existingEmail) {
+      return { error: "Este email já foi registrado." };
+    }
+
+    const passwordHash = await hashPassword(password);
+
+    await db.user.create({
       username,
-    },
-  });
-
-  if (existingUser) {
-    return { error: "Este usuário já existe." };
-  }
-
-  const existingEmail = await db.user.findFirst({
-    where: {
       email,
-    },
-  });
+      passwordHash,
+    });
 
-  if (existingEmail) {
-    return { error: "Este email já foi registrado." };
+    redirect("/login");
+  } catch (error) {
+    console.error("Register error:", error);
+    return { error: "Erro ao registrar. Tente novamente." };
   }
-
-  const passwordHash = await hashPassword(password);
-
-  await db.user.create({
-    username,
-    email,
-    passwordHash,
-  });
-
-  redirect("/login");
 }
 
 export async function login(prevState: any, formData: FormData) {
-  const username = String(formData.get("username") ?? "").trim();
-  const password = String(formData.get("password") ?? "").trim();
+  try {
+    const username = String(formData.get("username") ?? "").trim();
+    const password = String(formData.get("password") ?? "").trim();
 
-  if (!username) {
-    return { error: "Informe o usuário." };
+    if (!username) {
+      return { error: "Informe o usuário." };
+    }
+
+    if (!password) {
+      return { error: "Informe a senha." };
+    }
+
+    const user = await db.user.findFirst({
+      where: {
+        username,
+      },
+    });
+
+    if (!user) {
+      return { error: "Usuário ou senha inválidos." };
+    }
+
+    const passwordHash = await hashPassword(password);
+
+    if (user.passwordHash !== passwordHash) {
+      return { error: "Usuário ou senha inválidos." };
+    }
+
+    // Create session
+    const sessionToken = generateSessionToken();
+    const expiresAt = new Date(Date.now() + 30 * 24 * 60 * 60 * 1000); // 30 days
+
+    await db.session.create({
+      token: sessionToken,
+      userId: user.id,
+      expiresAt,
+    });
+
+    // Set session cookie
+    const cookieStore = await cookies();
+    cookieStore.set("session", sessionToken, {
+      httpOnly: true,
+      secure: process.env.NODE_ENV === "production",
+      sameSite: "lax",
+      maxAge: 30 * 24 * 60 * 60, // 30 days
+      path: "/",
+    });
+
+    redirect("/");
+  } catch (error) {
+    console.error("Login error:", error);
+    return { error: "Erro ao fazer login. Tente novamente." };
   }
-
-  if (!password) {
-    return { error: "Informe a senha." };
-  }
-
-  const user = await db.user.findFirst({
-    where: {
-      username,
-    },
-  });
-
-  if (!user) {
-    return { error: "Usuário ou senha inválidos." };
-  }
-
-  const passwordHash = await hashPassword(password);
-
-  if (user.passwordHash !== passwordHash) {
-    return { error: "Usuário ou senha inválidos." };
-  }
-
-  // Create session
-  const sessionToken = generateSessionToken();
-  const expiresAt = new Date(Date.now() + 30 * 24 * 60 * 60 * 1000); // 30 days
-
-  await db.session.create({
-    token: sessionToken,
-    userId: user.id,
-    expiresAt,
-  });
-
-  // Set session cookie
-  const cookieStore = await cookies();
-  cookieStore.set("session", sessionToken, {
-    httpOnly: true,
-    secure: process.env.NODE_ENV === "production",
-    sameSite: "lax",
-    maxAge: 30 * 24 * 60 * 60, // 30 days
-    path: "/",
-  });
-
-  redirect("/");
 }
 
 export async function logout() {

@@ -18,6 +18,8 @@ import {
 import { FinanceBoard } from "@/components/finance-board";
 import { getDashboardData } from "@/lib/dashboard";
 import { formatCurrency } from "@/lib/money";
+import { getCurrentUser } from "@/lib/auth";
+import { logout } from "@/app/actions";
 
 type HomeProps = {
   searchParams?: Promise<{
@@ -79,6 +81,7 @@ export default async function Home({ searchParams }: HomeProps) {
   const previousCompetence = shiftCompetence(competence, -1);
   const nextCompetence = shiftCompetence(competence, 1);
   const dashboardResult = await loadDashboardData(competence);
+  const user = await getCurrentUser();
 
   if (!dashboardResult.ok) {
     return (
@@ -124,6 +127,21 @@ export default async function Home({ searchParams }: HomeProps) {
   return (
     <main className="soft-grid min-h-screen px-4 py-6 sm:px-6 lg:px-10">
       <div className="mx-auto flex w-full max-w-7xl flex-col gap-6">
+        {/* Header com logout */}
+        {user && (
+          <div className="flex justify-end">
+            <form action={logout} className="flex items-center gap-4">
+              <span className="text-slate-300">Bem-vindo, <strong>{user.username}</strong></span>
+              <button
+                type="submit"
+                className="px-4 py-2 bg-red-600 hover:bg-red-700 text-white rounded-lg transition-colors"
+              >
+                Sair
+              </button>
+            </form>
+          </div>
+        )}
+
         <section className="glass-card overflow-hidden rounded-[36px]">
           <div className="grid gap-10 px-6 py-8 sm:px-8 lg:grid-cols-[1.5fr_0.8fr] lg:px-10 lg:py-10">
             <div className="space-y-5">

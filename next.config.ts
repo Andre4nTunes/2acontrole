@@ -1,7 +1,5 @@
 import type { NextConfig } from "next";
 
-const nextConfig: NextConfig = {
-  // CSP removido temporariamente para resolver erro em produção
-};
+const nextConfig: NextConfig = {};
 
 export default nextConfig;
